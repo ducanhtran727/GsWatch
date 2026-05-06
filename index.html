@@ -408,6 +408,58 @@
           transform: translateY(0);
         }
       }
+
+      #fake-order-popup {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: #ffffff;
+        color: #333;
+        padding: 12px 18px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-left: 5px solid #da020e;
+        transform: translateX(-150%);
+        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        max-width: 320px;
+        pointer-events: none;
+      }
+
+      #fake-order-popup.show {
+        transform: translateX(0);
+      }
+
+      .order-icon {
+        background: #da020e;
+        color: white;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .order-info {
+        font-size: 0.85rem;
+        line-height: 1.4;
+      }
+
+      .order-info strong {
+        color: #da020e;
+      }
+
+      .order-time {
+        display: block;
+        font-size: 0.75rem;
+        color: #888;
+        margin-top: 2px;
+      }
     </style>
   </head>
 
@@ -420,6 +472,16 @@
         >
       </nav>
     </header>
+
+    <div id="fake-order-popup">
+      <div class="order-icon">
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+      <div class="order-info">
+        <span id="order-text"></span>
+        <span class="order-time">Vừa xong</span>
+      </div>
+    </div>
 
     <section class="hero">
       <h1>Legendary Red</h1>
@@ -691,6 +753,51 @@
               '<i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG';
           });
       });
+
+      const customers = [
+        { name: "Nguyễn Văn Hùng", city: "Hà Nội" },
+        { name: "Trần Thế Anh", city: "TP. Hồ Chí Minh" },
+        { name: "Lê Minh Tâm", city: "Đà Nẵng" },
+        { name: "Phạm Hoàng Long", city: "Hải Phòng" },
+        { name: "Vũ Đức Trọng", city: "Bình Dương" },
+        { name: "Đặng Thu Thảo", city: "Cần Thơ" },
+        { name: "Ngô Quốc Bảo", city: "Đồng Nai" },
+        { name: "Hoàng Anh Tuấn", city: "Nghệ An" },
+        { name: "Bùi Tuyết Mai", city: "Quảng Ninh" },
+      ];
+
+      const popup = document.getElementById("fake-order-popup");
+      const orderText = document.getElementById("order-text");
+
+      function showOrder() {
+        // Chọn ngẫu nhiên khách hàng
+        const randomCust =
+          customers[Math.floor(Math.random() * customers.length)];
+
+        // Cập nhật nội dung
+        orderText.innerHTML = `<strong>${randomCust.name}</strong> (${randomCust.city}) vừa đặt mua thành công 1 chiếc <strong>GA-2100 MU</strong>`;
+
+        // Hiển thị popup
+        popup.classList.add("show");
+
+        // Sau 5 giây thì ẩn đi
+        setTimeout(() => {
+          popup.classList.remove("show");
+        }, 5000);
+      }
+
+      // Lần đầu tiên xuất hiện sau 3 giây vào trang
+      setTimeout(() => {
+        showOrder();
+
+        // Sau đó cứ mỗi 15-25 giây lại xuất hiện một lần ngẫu nhiên
+        setInterval(
+          () => {
+            showOrder();
+          },
+          Math.floor(Math.random() * (25000 - 15000 + 1) + 15000),
+        );
+      }, 3000);
     </script>
 
     <footer>
