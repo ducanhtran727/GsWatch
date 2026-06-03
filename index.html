@@ -973,6 +973,7 @@
       const btnSubmit = form.querySelector(".btn-submit");
 
       form.addEventListener("submit", (e) => {
+        fbq("track", "InitiateCheckout");
         e.preventDefault();
 
         // Hiệu ứng đang gửi
@@ -993,6 +994,7 @@
             btnSubmit.innerHTML =
               '<i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG';
             form.reset();
+            fbq("track", "Purchase");
           })
           .catch((error) => {
             console.error("Lỗi!", error.message);
