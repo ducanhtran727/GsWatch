@@ -497,6 +497,127 @@
         color: #888;
         margin-top: 2px;
       }
+
+      /* CSS cập nhật cho Hero Section */
+      .hero {
+        min-height: 100vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("./May\ 2\,\ 2026\,\ 12_46_20\ AM.png") center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 120px 20px 60px 20px;
+      }
+
+      /* Tag giảm giá 60% nổi bật */
+      .promo-badge {
+        background: #ffcc00;
+        color: #111;
+        font-weight: 900;
+        font-size: 1rem;
+        padding: 8px 20px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+        animation: pulse 1.5s infinite;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1.2;
+      }
+
+      .hero h1 span {
+        color: var(--primary-red);
+      }
+
+      .hero .price-box {
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
+      }
+
+      .hero .old-price {
+        text-decoration: line-through;
+        color: #888;
+        margin-right: 15px;
+      }
+
+      .hero .new-price {
+        color: #2ecc71;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+
+      /* Đồng hồ đếm ngược */
+      .countdown-container {
+        margin-bottom: 2.5rem;
+      }
+
+      .countdown-title {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #aaa;
+        margin-bottom: 10px;
+      }
+
+      .timer {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .time-box {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 10px 15px;
+        border-radius: 8px;
+        min-width: 70px;
+      }
+
+      .time-box span {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--white);
+      }
+
+      .time-box label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: #888;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+        .hero .new-price {
+          font-size: 2rem;
+        }
+      }
     </style>
   </head>
 
@@ -521,12 +642,50 @@
     </div>
 
     <section class="hero">
-      <h1>Legendary Red</h1>
-      <p>
-        Sự kết hợp hoàn hảo giữa bản sắc Quỷ Đỏ và độ bền huyền thoại của
-        G-Shock GA-2100.
+      <div class="promo-badge">
+        <i class="fas fa-fire"></i> GIẢM GIÁ LỚN 60% - Tặng kèm dây đeo kim loại
+        cao cấp
+      </div>
+
+      <h1>G-SHOCK x MANCHESTER UNITED<br /><span>PHIÊN BẢN GIỚI HẠN</span></h1>
+
+      <p
+        style="font-size: 1.2rem; max-width: 700px; color: #ddd; margin: 0 auto"
+      >
+        Cơ hội duy nhất sở hữu siêu phẩm GA-2100 Custom mang linh hồn Quỷ Đỏ với
+        mức giá không tưởng.
       </p>
-      <a href="#gallery" class="btn-buy">Khám phá ngay</a>
+
+      <div class="price-box">
+        <span class="old-price">2.500.000đ</span>
+        <span class="new-price">989.000đ</span>
+      </div>
+
+      <div class="countdown-container">
+        <div class="countdown-title">Ưu đãi kết thúc sau:</div>
+        <div class="timer">
+          <div class="time-box">
+            <span id="hours">02</span>
+            <label>Giờ</label>
+          </div>
+          <div class="time-box">
+            <span id="minutes">45</span>
+            <label>Phút</label>
+          </div>
+          <div class="time-box">
+            <span id="seconds">30</span>
+            <label>Giây</label>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="#order-section"
+        class="btn-buy"
+        style="font-size: 1.2rem; padding: 1.2rem 3rem"
+      >
+        <i class="fas fa-bolt"></i> Nhận Ưu Đãi Ngay
+      </a>
     </section>
 
     <section class="container" id="gallery">
@@ -563,7 +722,7 @@
           </div>
         </div>
 
-         <div class="product-card">
+        <div class="product-card">
           <img src="./dây thép.webp" alt="Mặt lưng đồng hồ" />
           <div class="product-info">
             <h3>Tặng Kèm Dây Đeo Thông Minh Thép Không Gỉ Cao Cấp</h3>
@@ -615,8 +774,9 @@
                 <i class="fas fa-check-circle"></i> Tặng kèm hộp đựng dụng cụ
                 thay dây
               </li>
-               <li>
-                <i class="fas fa-check-circle"></i> Tặng kèm dây đeo thông minh thép không gỉ cao cấp
+              <li>
+                <i class="fas fa-check-circle"></i> Tặng kèm dây đeo thông minh
+                thép không gỉ cao cấp
               </li>
             </ul>
             <!-- <div style="margin-top: 30px; border-radius: 10px; overflow: hidden;">
@@ -743,8 +903,8 @@
           </div>
         </div>
 
-          <!-- Comment 3 -->
-         <div class="comment-item">
+        <!-- Comment 3 -->
+        <div class="comment-item">
           <div class="user-avatar" style="background-color: #59b67e">HA</div>
           <div class="comment-content">
             <div class="user-name">Hải Anh <span>- 14 giờ trước</span></div>
@@ -782,7 +942,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -867,6 +1026,53 @@
           Math.floor(Math.random() * (25000 - 15000 + 1) + 15000),
         );
       }, 3000);
+    </script>
+
+    <script>
+      function startCountdown() {
+        // Thiết lập thời gian đếm ngược ban đầu: 2 giờ, 45 phút, 00 giây
+        let hours = 2;
+        let minutes = 45;
+        let seconds = 0;
+
+        // Lấy các thẻ hiển thị ngoài màn hình
+        const hoursElement = document.getElementById("hours");
+        const minutesElement = document.getElementById("minutes");
+        const secondsElement = document.getElementById("seconds");
+
+        // Chạy hàm cập nhật sau mỗi 1 giây (1000ms)
+        const countdownInterval = setInterval(() => {
+          // Trừ đi 1 giây
+          seconds--;
+
+          // Nếu số giây xuống dưới 0
+          if (seconds < 0) {
+            seconds = 59;
+            minutes--; // Trừ đi 1 phút
+
+            // Nếu số phút xuống dưới 0
+            if (minutes < 0) {
+              minutes = 59;
+              hours--; // Trừ đi 1 giờ
+            }
+          }
+
+          // Nếu hết sạch thời gian (về 00:00:00), tự động reset lại để trang không bị lỗi
+          if (hours < 0) {
+            hours = 2;
+            minutes = 45;
+            seconds = 0;
+          }
+
+          // Định dạng hiển thị luôn có 2 chữ số (VD: số 5 thành "05")
+          hoursElement.textContent = hours < 10 ? "0" + hours : hours;
+          minutesElement.textContent = minutes < 10 ? "0" + minutes : minutes;
+          secondsElement.textContent = seconds < 10 ? "0" + seconds : seconds;
+        }, 1000);
+      }
+
+      // Kích hoạt bộ đếm ngược ngay khi trang tải xong
+      window.addEventListener("DOMContentLoaded", startCountdown);
     </script>
 
     <footer>
