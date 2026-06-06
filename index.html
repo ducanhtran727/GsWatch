@@ -148,14 +148,14 @@
       /* Product Gallery */
       .container {
         max-width: 1200px;
-        margin: 4rem auto;
+        margin: 2rem auto;
         padding: 0 20px;
       }
 
       .section-title {
         text-align: center;
         font-size: 2.5rem;
-        margin-bottom: 3rem;
+        margin-bottom: 3.5rem;
         text-transform: uppercase;
       }
 
@@ -240,7 +240,7 @@
       .section-title {
         text-align: center;
         font-size: 2.5rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
         text-transform: uppercase;
       }
 
@@ -457,11 +457,11 @@
 
       #fake-order-popup {
         position: fixed;
-        bottom: 20px;
+        top: 20px;
         left: 20px;
         background: #ffffff;
         color: #333;
-        padding: 12px 18px;
+        padding: 8px 12px;
         border-radius: 8px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         z-index: 10000;
@@ -738,17 +738,6 @@
           </div>
         </div>
 
-        <div class="product-card">
-          <img
-            src="./ChatGPT Image Jun 3, 2026, 11_42_01 PM.png"
-            alt="Dây thép"
-          />
-          <div class="product-info">
-            <h3>
-              Bảo hành chất lượng máy 3 năm và pin trọn đời cho khách hàng
-            </h3>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -1002,10 +991,7 @@
             btnSubmit.innerHTML =
               '<i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG';
             form.reset();
-            fbq("track", "Purchase", {
-              value: 989000,
-              currency: "VND",
-            });
+            fbq("track", "Purchase");
           })
           .catch((error) => {
             console.error("Lỗi!", error.message);
@@ -1037,7 +1023,7 @@
           customers[Math.floor(Math.random() * customers.length)];
 
         // Cập nhật nội dung
-        orderText.innerHTML = `<strong>${randomCust.name}</strong> (${randomCust.city}) vừa đặt mua thành công 1 chiếc <strong>GA-2100 MU</strong>`;
+        orderText.innerHTML = `<strong>${randomCust.name}</strong> (${randomCust.city}) vừa đặt mua thành công </strong>`;
 
         // Hiển thị popup
         popup.classList.add("show");
