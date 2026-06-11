@@ -772,6 +772,131 @@
         color: #aaa;
         line-height: 1.6;
       }
+
+      .fb-comments-section {
+        background: #18191a; /* Màu nền Dark Mode của Facebook */
+        padding: 60px 0;
+        border-top: 1px solid #3a3b3c;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+      }
+
+      .fb-container {
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Thanh đếm số bình luận phía trên */
+      .fb-header {
+        border-bottom: 1px solid #3a3b3c;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+        color: #e4e6eb;
+        font-weight: 600;
+      }
+
+      .fb-comment-item {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 20px;
+        align-items: flex-start;
+      }
+
+      .fb-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .fb-comment-body {
+        flex-grow: 1;
+      }
+
+      /* Khối nội dung bong bóng bình luận */
+      .fb-comment-bubble {
+        background-color: #3a3b3c;
+        border-radius: 18px;
+        padding: 10px 14px;
+        display: inline-block;
+        max-width: 100%;
+        position: relative;
+      }
+
+      .fb-user-name {
+        font-weight: 600;
+        color: #e4e6eb;
+        font-size: 0.85rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 2px;
+      }
+
+      /* Tích xanh chính chủ */
+      .fb-user-name .v-badge {
+        color: #1877f2;
+        font-size: 0.8rem;
+      }
+
+      .fb-comment-text {
+        color: #e4e6eb;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        word-break: break-word;
+      }
+
+      /* Khối hiển thị số Like ở góc bong bóng */
+      .fb-like-count-badge {
+        position: absolute;
+        bottom: -10px;
+        right: 10px;
+        background: #242526;
+        border: 1px solid #3a3b3c;
+        padding: 2px 6px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.75rem;
+        color: #b0b3b8;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      .fb-like-count-badge .like-icons {
+        color: #1877f2;
+      }
+
+      /* Các nút tương tác bên dưới bình luận: Thích, Phản hồi, Thời gian */
+      .fb-comment-actions {
+        padding-left: 12px;
+        margin-top: 4px;
+        font-size: 0.75rem;
+        color: #b0b3b8;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .fb-action-btn {
+        color: #b0b3b8;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .fb-action-btn:hover {
+        text-decoration: underline;
+      }
+
+      .fb-action-btn.liked {
+        color: #1877f2;
+      }
     </style>
   </head>
 
@@ -1024,17 +1149,8 @@
             </div>
             <h3>Xem Hàng Trước - Trả Tiền Sau</h3>
             <p>
-              Shipper giao tới, bạn được mở hộp, lên tay kiểm tra rồi mới trả tiền.
-            </p>
-          </div>
-
-          <div class="warranty-card">
-            <div class="warranty-icon">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <h3>Cam Kết Chính Hãng</h3>
-            <p>
-              Phôi đồng hồ chuẩn Casio G-Shock GA-2100 Nhật Bản
+              Shipper giao tới, bạn được mở hộp, lên tay kiểm tra rồi mới trả
+              tiền.
             </p>
           </div>
         </div>
@@ -1141,91 +1257,101 @@
       </div>
     </section>
 
-    <section class="comments-section">
-      <div class="comment-container">
-        <h2 class="section-title">Khách hàng <span>Nói gì?</span></h2>
+    <section class="fb-comments-section">
+      <div class="fb-container">
+        <div class="fb-header">
+          Ý kiến phản hồi từ khách hàng từ facebook
+        </div>
 
-        <!-- Comment 1 -->
-        <div class="comment-item">
-          <div class="user-avatar" style="background-color: #e67e22">TH</div>
-          <div class="comment-content">
-            <div class="user-name">Trần Hoàng <span>- 2 giờ trước</span></div>
-            <div class="rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
+        <div class="fb-comment-item">
+          <img
+            class="fb-avatar"
+            src="./nam-1.jpg"
+            alt="Avatar"
+          />
+          <div class="fb-comment-body">
+            <div class="fb-comment-bubble">
+              <a href="#" class="fb-user-name"
+                >Trần Quốc Hoàng <i class="fas fa-check-circle v-badge"></i
+              ></a>
+              <p class="fb-comment-text">
+                Hàng nhận được cực kỳ nét nha ae, đúng phôi GA-2100 đập hộp.
+                Đóng gói cẩn thận, mở ra cái logo MU đỏ rực nhìn phê thực sự.
+                Được tặng thêm bộ dây kim loại lắp vào nhìn như Hublot sang
+                chảnh hẳn!
+              </p>
+
+              <div class="fb-like-count-badge">
+                <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
+                <span>42</span>
+              </div>
             </div>
-            <p class="comment-text">
-              Hàng cực đẹp, cầm rất chắc tay. Là fan MU thì không thể bỏ qua em
-              này. Đóng gói rất cẩn thận, fullbox đúng như ảnh.
-            </p>
-            <div class="verified-buyer">
-              <i class="fas fa-check-circle"></i> Đã mua hàng tại đây
+            <div class="fb-comment-actions">
+              <span class="fb-action-btn liked">Đã thích</span>
+              <span class="fb-action-btn">Phản hồi</span>
+              <span>1 giờ trước</span>
             </div>
           </div>
         </div>
 
-        <!-- Comment 2 -->
-        <div class="comment-item">
-          <div class="user-avatar" style="background-color: #3498db">NM</div>
-          <div class="comment-content">
-            <div class="user-name">Nguyễn Minh <span>- 5 giờ trước</span></div>
-            <div class="rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
+        <div class="fb-comment-item">
+          <img
+            class="fb-avatar"
+            src="./nam-2.jpg"
+            alt="Avatar"
+          />
+          <div class="fb-comment-body">
+            <div class="fb-comment-bubble">
+              <a href="#" class="fb-user-name">Nguyễn Tuấn Minh</a>
+              <p class="fb-comment-text">
+                Ship siêu nhanh luôn shop ơi, đặt hôm qua mà trưa nay shipper đã
+                gọi giao ở HN rồi. Cho mở hộp kiểm tra đúng mẫu mới trả tiền nên
+                rất uy tín. Fan Quỷ đỏ là phải săn ngay em này nhé mng.
+              </p>
+
+              <div class="fb-like-count-badge">
+                <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
+                <span>18</span>
+              </div>
             </div>
-            <p class="comment-text">
-              Giao hàng nhanh, mình ở HCM đặt hôm trước hôm sau có luôn. Mặt
-              đồng hồ thiết kế rất tinh xảo, màu đỏ rất rực rỡ.
-            </p>
-            <div class="verified-buyer">
-              <i class="fas fa-check-circle"></i> Đã mua hàng tại đây
+            <div class="fb-comment-actions">
+              <span class="fb-action-btn">Thích</span>
+              <span class="fb-action-btn">Phản hồi</span>
+              <span>3 giờ trước</span>
             </div>
           </div>
         </div>
 
-        <!-- Comment 3 -->
-        <div class="comment-item">
-          <div class="user-avatar" style="background-color: #59b67e">HA</div>
-          <div class="comment-content">
-            <div class="user-name">Hải Anh <span>- 14 giờ trước</span></div>
-            <div class="rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
-            </div>
-            <p class="comment-text">
-              Đồng hồ quá chất, đeo vào nhìn rất khỏe khoắn. Giá cả hợp lý cho
-              một bản custom đẹp như thế này.
-            </p>
-            <div class="verified-buyer">
-              <i class="fas fa-check-circle"></i> Đã mua hàng tại đây
-            </div>
-          </div>
-        </div>
+        <div class="fb-comment-item">
+          <img
+            class="fb-avatar"
+            src="./nu-1.jpg"
+            alt="Avatar"
+          />
+          <div class="fb-comment-body">
+            <div class="fb-comment-bubble">
+              <a href="#" class="fb-user-name">Lê Thùy Linh</a>
+              <p class="fb-comment-text">
+                Mua tặng sinh nhật người yêu mà ổng mê tít, suốt ngày đeo chụp
+                ảnh khoe bạn bè 😂 Thấy shop bảo hành tận 5 năm với thay pin
+                trọn đời nên cũng yên tâm hẳn.
+              </p>
 
-        <!-- Comment 4 -->
-        <div class="comment-item">
-          <div class="user-avatar" style="background-color: #9b59b6">AV</div>
-          <div class="comment-content">
-            <div class="user-name">Anh Vũ <span>- 1 ngày trước</span></div>
-            <div class="rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star-half-alt"></i>
+              <div class="fb-like-count-badge">
+                <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
+                <span>9</span>
+              </div>
             </div>
-            <p class="comment-text">
-              Đồng hồ quá chất, đeo vào nhìn rất khỏe khoắn. Giá cả hợp lý cho
-              một bản custom đẹp như thế này.
-            </p>
-            <div class="verified-buyer">
-              <i class="fas fa-check-circle"></i> Đã mua hàng tại đây
+            <div class="fb-comment-actions">
+              <span class="fb-action-btn">Thích</span>
+              <span class="fb-action-btn">Phản hồi</span>
+              <span>5 giờ trước</span>
             </div>
           </div>
         </div>
       </div>
     </section>
+
 
     <script>
       const scriptURL =
