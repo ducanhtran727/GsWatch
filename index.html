@@ -693,6 +693,85 @@
       .specs-table td.value strong {
         color: var(--primary-red);
       }
+      .warranty-section {
+        background: #0d0d0d;
+        padding: 80px 0;
+        border-bottom: 1px solid #333;
+      }
+
+      .warranty-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .warranty-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 20px;
+      }
+
+      .warranty-card {
+        background: #161616;
+        border: 1px solid #252525;
+        border-radius: 12px;
+        padding: 30px 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .warranty-card:hover {
+        border-color: var(--primary-red);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(218, 2, 14, 0.1);
+      }
+
+      .warranty-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--primary-red);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .warranty-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .warranty-icon {
+        width: 70px;
+        height: 70px;
+        background: rgba(218, 2, 14, 0.1);
+        color: var(--primary-red);
+        font-size: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px auto;
+        border: 1px solid rgba(218, 2, 14, 0.2);
+      }
+
+      .warranty-card h3 {
+        font-size: 1.2rem;
+        color: #fff;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .warranty-card p {
+        font-size: 0.9rem;
+        color: #aaa;
+        line-height: 1.6;
+      }
     </style>
   </head>
 
@@ -733,7 +812,7 @@
 
       <div class="price-box">
         <span class="old-price">2.500.000đ</span>
-        <span class="new-price">889.000đ</span>
+        <span class="new-price">989.000đ</span>
       </div>
 
       <div class="countdown-container">
@@ -888,8 +967,8 @@
               <tr>
                 <td class="label">Tính năng cốt lõi</td>
                 <td class="value">
-                  Đèn LED cực sáng, Giờ thế giới (31 múi giờ), Đồng hồ bấm
-                  giờ 1/100 giây, 5 chế độ báo thức, Lịch tự động hoàn toàn
+                  Đèn LED cực sáng, Giờ thế giới (31 múi giờ), Đồng hồ bấm giờ
+                  1/100 giây, 5 chế độ báo thức, Lịch tự động hoàn toàn
                 </td>
               </tr>
               <tr>
@@ -910,6 +989,58 @@
       </div>
     </section>
 
+    <section class="warranty-section">
+      <div class="warranty-container">
+        <h2 class="section-title">
+          Chính Sách <span>Bảo Hành & Cam Kết</span>
+        </h2>
+
+        <div class="warranty-grid">
+          <div class="warranty-card">
+            <div class="warranty-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Bảo Hành 5 Năm</h3>
+            <p>
+              Bảo hành bộ máy và pin lên đến 5 năm kể từ ngày mua. Hỗ trợ thay
+              pin hoàn toàn miễn phí trọn đời sản phẩm.
+            </p>
+          </div>
+
+          <div class="warranty-card">
+            <div class="warranty-icon">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <h3>1 Đổi 1 Trong 30 Ngày</h3>
+            <p>
+              Nếu sản phẩm xuất hiện bất kỳ lỗi nào từ nhà sản xuất hoặc lỗi
+              hoàn thiện custom, bên em hỗ trợ đổi mới 100% miễn phí tận nhà.
+            </p>
+          </div>
+
+          <div class="warranty-card">
+            <div class="warranty-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3>Xem Hàng Trước - Trả Tiền Sau</h3>
+            <p>
+              Shipper giao tới, bạn được mở hộp, lên tay kiểm tra rồi mới trả tiền.
+            </p>
+          </div>
+
+          <div class="warranty-card">
+            <div class="warranty-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3>Cam Kết Chính Hãng</h3>
+            <p>
+              Phôi đồng hồ chuẩn Casio G-Shock GA-2100 Nhật Bản
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="order-section">
       <div class="container">
         <h2 class="section-title">Đặt Hàng <span>Ngay</span></h2>
@@ -922,18 +1053,6 @@
               <li>
                 <i class="fas fa-check-circle"></i> Miễn phí vận chuyển toàn
                 quốc
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Bảo hành chất lượng máy 3
-                năm và pin trọn đời cho khách hàng
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Miễn phí đổi trả 1 tháng nếu
-                có lỗi của nhà sản xuất
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Kiểm tra hàng trước khi
-                thanh toán
               </li>
               <li>
                 <i class="fas fa-check-circle"></i> Tặng kèm hộp đựng dụng cụ
@@ -949,7 +1068,7 @@
                     </div> -->
           </div>
           <p class="price-tag">
-            889.000đ
+            989.000đ
             <span
               style="
                 font-size: 1rem;
@@ -1136,7 +1255,7 @@
             btnSubmit.innerHTML =
               '<i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG';
             fbq("track", "Purchase", {
-              value: 889000,
+              value: 989000,
               currency: "VND",
             });
             form.reset();
