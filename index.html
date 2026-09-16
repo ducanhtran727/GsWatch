@@ -1,1486 +1,2446 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>G-Shock x Manchester United | Phiên Bản Giới Hạn Độc Quyền</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js",
-      );
 
-      // THAY ID CỦA BẠN VÀO ĐÂY
-      fbq("init", "2173414820115184");
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G-Shock x Manchester United | Phiên Bản Giới Hạn Độc Quyền</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <script>
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js",
+    );
 
-      fbq("track", "PageView");
-      fbq("track", "ViewContent");
-    </script>
-    <noscript>
-      <img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=2173414820115184&ev=PageView&noscript=1"
-      />
-    </noscript>
+    // THAY ID CỦA BẠN VÀO ĐÂY
+    fbq("init", "2173414820115184");
 
-    <style>
-      :root {
-        --primary-red: #da020e;
-        /* Màu đỏ MU */
-        --dark-black: #111111;
-        --silver: #c0c0c0;
-        --white: #ffffff;
+    fbq("track", "PageView");
+    fbq("track", "ViewContent");
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display: none"
+      src="https://www.facebook.com/tr?id=2173414820115184&ev=PageView&noscript=1" />
+  </noscript>
+
+  <style>
+    :root {
+      --primary-red: #da020e;
+      /* Màu đỏ MU */
+      --dark-black: #111111;
+      --silver: #c0c0c0;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--dark-black);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 2px solid var(--primary-red);
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--white);
+      text-transform: uppercase;
+    }
+
+    .logo span {
+      color: var(--primary-red);
+    }
+
+    /* General Button */
+    .btn-buy {
+      background: var(--primary-red);
+      color: white;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+      text-transform: uppercase;
+    }
+
+    .btn-buy:hover {
+      background: #b3020b;
+      transform: scale(1.05);
+    }
+
+    /* Product Gallery */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3.5rem;
+      text-transform: uppercase;
+    }
+
+    .section-title span {
+      color: var(--primary-red);
+    }
+
+
+
+    #fake-order-popup {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #ffffff;
+      color: #333;
+      padding: 8px 12px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-left: 5px solid #da020e;
+      transform: translateX(-150%);
+      transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      max-width: 320px;
+      pointer-events: none;
+    }
+
+    #fake-order-popup.show {
+      transform: translateX(0);
+    }
+
+    .order-icon {
+      background: #da020e;
+      color: white;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .order-info {
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+
+    .order-info strong {
+      color: #da020e;
+    }
+
+    .order-time {
+      display: block;
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    /* Hero Section Redesign */
+    .hero {
+      min-height: auto;
+      background:
+        radial-gradient(circle at center, rgba(30, 10, 10, 0.85) 0%, rgba(10, 10, 10, 0.96) 100%),
+        url("./May\ 2\,\ 2026\,\ 12_46_20\ AM.png") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 95px 20px 40px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(218, 2, 14, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 35px;
+      margin: 0 auto;
+    }
+
+    /* Cột ảnh sản phẩm */
+    .hero-image-col {
+      flex: 1;
+      max-width: 440px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid rgba(218, 2, 14, 0.45);
+      background: #181818;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 30px rgba(218, 2, 14, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+    }
+
+    .hero-image-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9), 0 0 35px rgba(218, 2, 14, 0.4);
+    }
+
+    .hero-watch-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      max-height: 400px;
+    }
+
+    .hero-img-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--primary-red);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      z-index: 2;
+    }
+
+    .hero-image-caption {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      color: #ffcc00;
+      text-align: center;
+      border-top: 1px solid #333;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* Cột thông tin sản phẩm */
+    .hero-content-col {
+      flex: 1.15;
+      text-align: left;
+      max-width: 550px;
+    }
+
+    /* Tag giảm giá thu nhỏ gọn gàng */
+    .promo-badge {
+      background: rgba(255, 204, 0, 0.12);
+      color: #ffcc00;
+      border: 1px solid #ffcc00;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 0 10px rgba(255, 204, 0, 0.15);
+      animation: pulse 1.8s infinite;
+    }
+
+    .hero-title {
+      font-size: 1.85rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ffffff;
+    }
+
+    .hero-title span {
+      color: var(--primary-red);
+      display: block;
+      font-size: 1.55rem;
+    }
+
+    /* Khối giá */
+    .hero .price-box {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0.5rem 0 0.8rem 0;
+      flex-wrap: wrap;
+    }
+
+    .hero .new-price {
+      color: #2ecc71;
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .hero .old-price {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 1.15rem;
+    }
+
+    .discount-pill {
+      background: var(--primary-red);
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    /* Đồng hồ đếm ngược thu gọn */
+    .countdown-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      width: fit-content;
+    }
+
+    .countdown-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #bbb;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 0;
+    }
+
+    .timer {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .timer-colon {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--primary-red);
+      line-height: 1;
+    }
+
+    .time-box {
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 3px 7px;
+      border-radius: 5px;
+      min-width: 44px;
+      text-align: center;
+    }
+
+    .time-box span {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+    }
+
+    .time-box label {
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      color: #888;
+      display: block;
+      margin-top: 1px;
+    }
+
+    /* Điểm nổi bật nhanh */
+    .hero-highlights {
+      list-style: none;
+      margin-bottom: 1rem;
+      padding: 0;
+    }
+
+    .hero-highlights li {
+      font-size: 0.85rem;
+      color: #ddd;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-highlights i {
+      color: #2ecc71;
+      font-size: 0.9rem;
+    }
+
+    /* Nút CTA nổi bật */
+    .btn-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      max-width: 320px;
+      font-size: 1.05rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(218, 2, 14, 0.45);
+      animation: pulseCta 2s infinite;
+    }
+
+    @keyframes pulseCta {
+
+      0%,
+      100% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(218, 2, 14, 0.45);
       }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      50% {
+        transform: scale(1.02);
+        box-shadow: 0 6px 28px rgba(218, 2, 14, 0.7);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
       }
 
-      body {
-        background-color: var(--dark-black);
-        color: var(--white);
-        line-height: 1.6;
+      50% {
+        transform: scale(1.04);
       }
 
-      /* Header */
-      header {
-        background: rgba(0, 0, 0, 0.9);
-        padding: 1rem 5%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-        border-bottom: 2px solid var(--primary-red);
+      100% {
+        transform: scale(1);
       }
+    }
 
-      .logo {
-        font-size: 1.4rem;
-        font-weight: bold;
-        color: var(--white);
-        text-transform: uppercase;
-      }
-
-      .logo span {
-        color: var(--primary-red);
-      }
-
-      /* Hero Section */
+    @media (max-width: 768px) {
       .hero {
-        height: 100vh;
-        background:
-          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url("./May\ 2\,\ 2026\,\ 12_46_20\ AM.png") center/cover;
-        display: flex;
+        padding: 75px 12px 25px 12px;
+      }
+
+      .hero-container {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding-top: 80px;
-        padding-left: 8px;
-        padding-right: 8px;
-      }
-
-      .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-      }
-
-      .hero p {
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin-bottom: 2rem;
-      }
-
-      .btn-buy {
-        background: var(--primary-red);
-        color: white;
-        padding: 1rem 2.5rem;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 5px;
-        transition: 0.3s;
-        text-transform: uppercase;
-      }
-
-      .btn-buy:hover {
-        background: #b3020b;
-        transform: scale(1.05);
-      }
-
-      /* Product Gallery */
-      .container {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 20px;
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 3.5rem;
-        text-transform: uppercase;
-      }
-
-      .section-title span {
-        color: var(--primary-red);
-      }
-
-      .product-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-      }
-
-      .product-card {
-        background: #1a1a1a;
-        border: 1px solid #333;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: 0.3s;
-      }
-
-      .product-card:hover {
-        border-color: var(--primary-red);
-      }
-
-      .product-card img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        display: block;
-      }
-
-      .product-info {
-        padding: 1.5rem;
-        text-align: center;
-      }
-
-      /* Features */
-      .features {
-        background: #0a0a0a;
-        padding: 4rem 0;
-      }
-
-      .feature-list {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 2rem;
-      }
-
-      .feature-item {
-        text-align: center;
-        max-width: 250px;
-      }
-
-      .feature-item i {
-        font-size: 2.5rem;
-        color: var(--primary-red);
-        margin-bottom: 1rem;
-      }
-
-      /* Footer */
-      footer {
-        background: #000;
-        padding: 3rem 0;
-        text-align: center;
-        border-top: 1px solid #333;
-      }
-
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 2rem;
-        }
-      }
-
-      /* Section Đặt Hàng */
-      #order-section {
-        padding: 10px 0;
-        background: linear-gradient(180deg, var(--dark-black) 0%, #222 100%);
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        text-transform: uppercase;
-      }
-
-      .section-title span {
-        color: var(--primary-red);
-      }
-
-      .order-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        align-items: flex-start;
-        justify-content: center;
-      }
-
-      /* Form Styling */
-      .order-form {
-        background: var(--gray-bg);
-        padding: 40px;
-        border-radius: 15px;
-        flex: 1;
-        min-width: 320px;
-        max-width: 600px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        border: 1px solid #333;
-      }
-
-      .form-group {
-        margin-bottom: 20px;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 600;
-        color: #ccc;
-      }
-
-      .form-group input,
-      .form-group textarea,
-      .form-group select {
-        width: 100%;
-        padding: 12px 15px;
-        border-radius: 5px;
-        border: 1px solid #444;
-        background: #252525;
-        color: white;
-        font-size: 1rem;
-        outline: none;
-        transition: 0.3s;
-      }
-
-      .form-group input:focus,
-      .form-group textarea:focus {
-        border-color: var(--primary-red);
-        box-shadow: 0 0 5px rgba(218, 2, 14, 0.3);
-      }
-
-      .btn-submit {
-        width: 100%;
-        background: var(--primary-red);
-        color: white;
-        padding: 15px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: 0.3s;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .btn-submit:hover {
-        background: #b3020b;
-        transform: translateY(-2px);
-      }
-
-      /* Cột thông tin sản phẩm bên cạnh form */
-      .product-summary {
-        flex: 1;
-        min-width: 320px;
-        max-width: 450px;
-      }
-
-      .product-summary h3 {
-        font-size: 1.8rem;
-        color: var(--primary-red);
-        margin-bottom: 15px;
-      }
-
-      .price-tag {
-        font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: 20px;
-      }
-
-      .benefit-list {
-        list-style: none;
-      }
-
-      .benefit-list li {
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .benefit-list i {
-        color: #2ecc71;
-      }
-
-      @media (max-width: 768px) {
-        .order-wrapper {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .order-form {
-          width: 100%;
-        }
-      }
-
-      /* CSS cho phần Comment */
-      .comments-section {
-        background: #111;
-        padding: 60px 0;
-        border-top: 1px solid #333;
-      }
-
-      .comment-container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .comment-item {
-        background: #1a1a1a;
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-left: 4px solid var(--primary-red);
-        display: flex;
         gap: 15px;
-        animation: fadeInUp 0.5s ease forwards;
-      }
-
-      .user-avatar {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: #333;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: var(--white);
-        flex-shrink: 0;
-        border: 2px solid #444;
-      }
-
-      .comment-content {
-        flex-grow: 1;
-      }
-
-      .user-name {
-        font-weight: bold;
-        color: var(--primary-red);
-        margin-bottom: 5px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .user-name span {
-        font-size: 0.8rem;
-        color: #888;
-        font-weight: normal;
-      }
-
-      .rating {
-        color: #ffc107;
-        margin-bottom: 8px;
-        font-size: 0.9rem;
-      }
-
-      .comment-text {
-        font-size: 0.95rem;
-        color: #ddd;
-      }
-
-      .verified-buyer {
-        font-size: 0.75rem;
-        color: #2ecc71;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        margin-top: 5px;
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      #fake-order-popup {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        background: #ffffff;
-        color: #333;
-        padding: 8px 12px;
-        border-radius: 8px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        border-left: 5px solid #da020e;
-        transform: translateX(-150%);
-        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-        max-width: 320px;
-        pointer-events: none;
-      }
-
-      #fake-order-popup.show {
-        transform: translateX(0);
-      }
-
-      .order-icon {
-        background: #da020e;
-        color: white;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-      }
-
-      .order-info {
-        font-size: 0.85rem;
-        line-height: 1.4;
-      }
-
-      .order-info strong {
-        color: #da020e;
-      }
-
-      .order-time {
-        display: block;
-        font-size: 0.75rem;
-        color: #888;
-        margin-top: 2px;
-      }
-
-      /* CSS cập nhật cho Hero Section */
-      .hero {
-        min-height: 100vh;
-        background:
-          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url("./May\ 2\,\ 2026\,\ 12_46_20\ AM.png") center/cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         text-align: center;
-        padding: 120px 20px 60px 20px;
       }
 
-      /* Tag giảm giá 60% nổi bật */
-      .promo-badge {
-        background: #ffcc00;
-        color: #111;
-        font-weight: 900;
-        font-size: 1rem;
-        padding: 8px 20px;
-        border-radius: 50px;
-        text-transform: uppercase;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
-        animation: pulse 1.5s infinite;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
+      .hero-image-col {
+        max-width: 270px;
+        margin: 0 auto;
       }
 
-      .hero h1 {
-        /* font-size: 1rem; */
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        line-height: 1.2;
+      .hero-content-col {
+        text-align: center;
+        width: 100%;
       }
 
-      .hero h1 span {
-        color: var(--primary-red);
+      .hero-title {
+        font-size: 1.35rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .hero-title span {
+        font-size: 1.15rem;
       }
 
       .hero .price-box {
-        margin: 1.5rem 0;
-        font-size: 1.5rem;
-      }
-
-      .hero .old-price {
-        text-decoration: line-through;
-        color: #888;
-        margin-right: 15px;
+        justify-content: center;
+        margin: 0.3rem 0 0.6rem 0;
       }
 
       .hero .new-price {
-        color: #2ecc71;
-        font-size: 2.5rem;
-        font-weight: bold;
+        font-size: 1.8rem;
       }
 
-      /* Đồng hồ đếm ngược */
       .countdown-container {
-        margin-bottom: 2.5rem;
-      }
-
-      .countdown-title {
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #aaa;
-        margin-bottom: 10px;
-      }
-
-      .timer {
-        display: flex;
-        gap: 15px;
+        margin: 0 auto 0.8rem auto;
         justify-content: center;
       }
 
-      .time-box {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        padding: 10px 15px;
-        border-radius: 8px;
-        min-width: 70px;
+      .hero-highlights {
+        display: inline-block;
+        text-align: left;
+        margin: 0 auto 0.8rem auto;
       }
 
-      .time-box span {
-        display: block;
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: var(--white);
-      }
-
-      .time-box label {
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        color: #888;
-      }
-
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 1.5rem;
-        }
-        .hero .new-price {
-          font-size: 2rem;
-        }
-      }
-
-      .specs-section {
-        background: #151515;
-        padding: 80px 0;
-        border-top: 1px solid #333;
-        border-bottom: 1px solid #333;
-      }
-
-      .specs-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .specs-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-        align-items: center;
-      }
-
-      .specs-image {
-        flex: 1;
-        min-width: 300px;
-        text-align: center;
-      }
-
-      .specs-image img {
+      .btn-hero-cta {
         max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-        border: 1px solid #444;
-      }
-
-      .specs-table-box {
-        flex: 1.2;
-        min-width: 320px;
-      }
-
-      .specs-table {
         width: 100%;
-        border-collapse: collapse;
-        margin-top: 15px;
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+      }
+    }
+
+    /* ================= COMMON & SECTION UTILITIES ================= */
+    .section-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sec-title-box {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .sec-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(218, 2, 14, 0.12);
+      color: var(--primary-red);
+      border: 1px solid rgba(218, 2, 14, 0.3);
+      padding: 4px 14px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.6rem;
+    }
+
+    .sec-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #fff;
+      line-height: 1.25;
+    }
+
+    .sec-title span {
+      color: var(--primary-red);
+    }
+
+    .sec-subtitle {
+      font-size: 0.95rem;
+      color: #aaa;
+      margin-top: 0.4rem;
+    }
+
+    /* ================= 1. TRUST BAR SECTION (ĐƯA THÔNG TIN YÊN TÂM MUA LÊN SỚM) ================= */
+    .trust-bar-section {
+      background: #141414;
+      border-top: 1px solid #282828;
+      border-bottom: 1px solid #282828;
+      padding: 24px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .trust-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #1c1c1c;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1px solid #2d2d2d;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .trust-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary-red);
+    }
+
+    .trust-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(218, 2, 14, 0.12);
+      color: var(--primary-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      border: 1px solid rgba(218, 2, 14, 0.25);
+    }
+
+    .trust-text h4 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .trust-text p {
+      font-size: 0.78rem;
+      color: #999;
+      line-height: 1.35;
+    }
+
+    /* ================= 2. SECTION LÀM RÕ SẢN PHẨM CUSTOM ================= */
+    .custom-section {
+      padding: 70px 0;
+      background: #0f0f0f;
+      position: relative;
+    }
+
+    .custom-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .custom-card {
+      background: #181818;
+      border: 1px solid #2e2e2e;
+      border-radius: 14px;
+      padding: 28px 22px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .custom-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary-red);
+      box-shadow: 0 10px 25px rgba(218, 2, 14, 0.15);
+    }
+
+    .custom-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .custom-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: rgba(218, 2, 14, 0.15);
+      color: var(--primary-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      border: 1px solid rgba(218, 2, 14, 0.3);
+    }
+
+    .custom-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .custom-card p {
+      font-size: 0.88rem;
+      color: #bbb;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .custom-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .custom-card ul li {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-bottom: 9px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    .custom-card ul li i {
+      color: #2ecc71;
+      margin-top: 3px;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+    }
+
+    .custom-card ul li span {
+      flex: 1;
+    }
+
+    .custom-card ul li strong {
+      color: #fff;
+    }
+
+    /* ================= 3. SECTION TRỌN BỘ SẢN PHẨM NHẬN ĐƯỢC ================= */
+    .fullset-section {
+      padding: 70px 0;
+      background: #141414;
+      border-top: 1px solid #282828;
+    }
+
+    .fullset-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      background: #1b1b1b;
+      border: 1.5px solid #333;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    }
+
+    .fullset-image-col {
+      flex: 1;
+      max-width: 480px;
+      position: relative;
+    }
+
+    .fullset-img-box {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 2px solid rgba(218, 2, 14, 0.4);
+    }
+
+    .fullset-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .fullset-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--primary-red);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .fullset-content-col {
+      flex: 1.2;
+    }
+
+    .fullset-content-col h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .fullset-content-col h3 span {
+      color: var(--primary-red);
+    }
+
+    .fullset-desc {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .fullset-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 22px;
+    }
+
+    .fullset-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 12px;
+      background: #222;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      border-left: 3px solid var(--primary-red);
+    }
+
+    .fullset-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--primary-red);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .fullset-item-text strong {
+      color: #fff;
+      font-size: 0.92rem;
+      display: block;
+    }
+
+    .fullset-item-text span {
+      font-size: 0.82rem;
+      color: #999;
+    }
+
+    .fullset-alert-box {
+      background: rgba(255, 204, 0, 0.1);
+      border: 1px dashed #ffcc00;
+      padding: 12px 16px;
+      border-radius: 8px;
+      color: #e0d080;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .fullset-alert-box i {
+      color: #ffcc00;
+      font-size: 1.1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ================= 4. SECTION Q&A GALLERY (MỖI ẢNH GIẢI ĐÁP 1 CÂU HỎI) ================= */
+    .qa-section {
+      padding: 70px 0;
+      background: #0d0d0d;
+      border-top: 1px solid #282828;
+    }
+
+    .qa-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .qa-card {
+      background: #181818;
+      border: 1px solid #2c2c2c;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .qa-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary-red);
+    }
+
+    .qa-img-wrapper {
+      position: relative;
+      height: 320px;
+      background: #111;
+      overflow: hidden;
+    }
+
+    .qa-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .qa-card:hover .qa-img-wrapper img {
+      transform: scale(1.04);
+    }
+
+    .qa-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #ffcc00;
+      border: 1px solid #ffcc00;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      backdrop-filter: blur(4px);
+    }
+
+    .qa-content {
+      padding: 20px 22px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .qa-question {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.35;
+    }
+
+    .qa-question i {
+      color: var(--primary-red);
+      margin-top: 2px;
+    }
+
+    .qa-answer {
+      font-size: 0.88rem;
+      color: #bbb;
+      line-height: 1.6;
+    }
+
+    .qa-answer strong {
+      color: #fff;
+    }
+
+    /* ================= 5. SECTION THÔNG SỐ KỸ THUẬT TINH GỌN ================= */
+    .specs-section {
+      background: #141414;
+      padding: 70px 0;
+      border-top: 1px solid #282828;
+    }
+
+    .specs-core-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 25px;
+    }
+
+    .spec-core-item {
+      background: #1d1d1d;
+      border: 1px solid #303030;
+      border-radius: 10px;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .spec-core-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: rgba(218, 2, 14, 0.12);
+      color: var(--primary-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .spec-core-info label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: #888;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .spec-core-info strong {
+      font-size: 0.92rem;
+      color: #fff;
+    }
+
+    .specs-accordion {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .specs-summary-btn {
+      padding: 16px 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+      background: #202020;
+      user-select: none;
+      transition: background 0.2s;
+    }
+
+    .specs-summary-btn:hover {
+      background: #262626;
+      color: var(--primary-red);
+    }
+
+    .specs-summary-btn i.fa-sliders {
+      color: var(--primary-red);
+      margin-right: 8px;
+    }
+
+    .specs-detail-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .specs-detail-table tr {
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .specs-detail-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .specs-detail-table td {
+      padding: 12px 20px;
+      font-size: 0.88rem;
+    }
+
+    .specs-detail-table td.label {
+      color: #999;
+      font-weight: 600;
+      width: 35%;
+    }
+
+    .specs-detail-table td.value {
+      color: #ddd;
+    }
+
+    /* ================= 6. SECTION BẢO HÀNH ================= */
+    .warranty-section {
+      background: #0d0d0d;
+      padding: 70px 0;
+      border-top: 1px solid #282828;
+    }
+
+    .warranty-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .warranty-card {
+      background: #161616;
+      border: 1px solid #252525;
+      border-radius: 12px;
+      padding: 30px 22px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .warranty-card:hover {
+      border-color: var(--primary-red);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(218, 2, 14, 0.15);
+    }
+
+    .warranty-icon {
+      width: 65px;
+      height: 65px;
+      background: rgba(218, 2, 14, 0.1);
+      color: var(--primary-red);
+      font-size: 1.8rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px auto;
+      border: 1px solid rgba(218, 2, 14, 0.25);
+    }
+
+    .warranty-card h3 {
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .warranty-card p {
+      font-size: 0.86rem;
+      color: #aaa;
+      line-height: 1.55;
+    }
+
+    /* ================= 7. SECTION FEEDBACK FACEBOOK CÓ ẢNH THẬT (TRƯỚC FORM) ================= */
+    .fb-comments-section {
+      background: #18191a;
+      padding: 70px 0;
+      border-top: 1px solid #3a3b3c;
+      border-bottom: 1px solid #3a3b3c;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .fb-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .fb-header {
+      border-bottom: 1px solid #3a3b3c;
+      padding-bottom: 12px;
+      margin-bottom: 22px;
+      font-size: 1rem;
+      color: #e4e6eb;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .fb-header-filter {
+      font-size: 0.82rem;
+      color: #b0b3b8;
+      font-weight: normal;
+    }
+
+    .fb-comment-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+
+    .fb-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid #3a3b3c;
+    }
+
+    .fb-comment-body {
+      flex-grow: 1;
+    }
+
+    .fb-comment-bubble {
+      background-color: #3a3b3c;
+      border-radius: 18px;
+      padding: 12px 16px;
+      display: inline-block;
+      max-width: 100%;
+      position: relative;
+    }
+
+    .fb-user-name {
+      font-weight: 600;
+      color: #e4e6eb;
+      font-size: 0.88rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 4px;
+    }
+
+    .fb-user-name .v-badge {
+      color: #1877f2;
+      font-size: 0.82rem;
+    }
+
+    .fb-user-tag {
+      font-size: 0.72rem;
+      background: rgba(46, 204, 113, 0.15);
+      color: #2ecc71;
+      padding: 1px 6px;
+      border-radius: 10px;
+      font-weight: 500;
+      margin-left: 4px;
+    }
+
+    .fb-comment-text {
+      color: #e4e6eb;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      word-break: break-word;
+    }
+
+    .fb-review-photo {
+      margin-top: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 220px;
+      border: 1px solid #4e4f50;
+    }
+
+    .fb-review-photo img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .fb-like-count-badge {
+      position: absolute;
+      bottom: -10px;
+      right: 12px;
+      background: #242526;
+      border: 1px solid #3a3b3c;
+      padding: 2px 7px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.72rem;
+      color: #b0b3b8;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .fb-like-count-badge .like-icons {
+      color: #1877f2;
+    }
+
+    .fb-comment-actions {
+      padding-left: 12px;
+      margin-top: 5px;
+      font-size: 0.75rem;
+      color: #b0b3b8;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .fb-action-btn {
+      color: #b0b3b8;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .fb-action-btn:hover {
+      text-decoration: underline;
+    }
+
+    .fb-action-btn.liked {
+      color: #1877f2;
+    }
+
+    /* ================= 8. SECTION ĐẶT HÀNG & TÓM TẮT ĐƠN HÀNG (LÀM RÕ BƯỚC ĐẶT HÀNG) ================= */
+    #order-section {
+      padding: 70px 0;
+      background: linear-gradient(180deg, #111111 0%, #1e1e1e 100%);
+    }
+
+    .order-layout {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    /* Cột trái: Tóm tắt đơn hàng & Quy trình */
+    .order-summary-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .order-summary-card {
+      background: #1a1a1a;
+      border: 1.5px solid #333;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .order-summary-header {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #2e2e2e;
+    }
+
+    .summary-product-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .summary-thumb {
+      width: 75px;
+      height: 75px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid #444;
+      flex-shrink: 0;
+    }
+
+    .summary-prod-details h4 {
+      font-size: 0.95rem;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .summary-prod-details p {
+      font-size: 0.78rem;
+      color: #aaa;
+    }
+
+    .summary-breakdown {
+      background: #141414;
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 16px;
+    }
+
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: #bbb;
+      margin-bottom: 8px;
+    }
+
+    .summary-line:last-child {
+      margin-bottom: 0;
+    }
+
+    .summary-line.highlight {
+      color: #2ecc71;
+      font-weight: 600;
+    }
+
+    .summary-total-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-top: 12px;
+      border-top: 1.5px dashed #3a3a3a;
+    }
+
+    .summary-total-box span.lbl {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .summary-total-box span.val {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #2ecc71;
+    }
+
+    /* Hộp 3 bước quy trình xử lý */
+    .order-process-card {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .order-process-card h4 {
+      font-size: 0.92rem;
+      color: #ffcc00;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .process-steps {
+      list-style: none;
+      padding: 0;
+    }
+
+    .process-step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .process-step-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .process-step-badge {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(218, 2, 14, 0.2);
+      color: var(--primary-red);
+      border: 1px solid rgba(218, 2, 14, 0.4);
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .process-step-text strong {
+      color: #fff;
+      font-size: 0.85rem;
+      display: block;
+    }
+
+    .process-step-text p {
+      font-size: 0.78rem;
+      color: #888;
+      line-height: 1.35;
+      margin-top: 2px;
+    }
+
+    /* Cột phải: Form đặt hàng */
+    .order-form-col {
+      flex: 1.1;
+    }
+
+    .order-form {
+      background: #1b1b1b;
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #333;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .order-form h3 {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .order-form-desc {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: #ccc;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 6px;
+      border: 1px solid #444;
+      background: #252525;
+      color: white;
+      font-size: 0.95rem;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--primary-red);
+      box-shadow: 0 0 6px rgba(218, 2, 14, 0.4);
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--primary-red);
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 5px 20px rgba(218, 2, 14, 0.5);
+    }
+
+    .btn-submit:hover {
+      background: #b3020b;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(218, 2, 14, 0.7);
+    }
+
+    /* Footer */
+    footer {
+      background: #080808;
+      padding: 2.5rem 0;
+      text-align: center;
+      border-top: 1px solid #222;
+      color: #777;
+      font-size: 0.85rem;
+    }
+
+    footer p {
+      margin-bottom: 4px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 992px) {
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .specs-table tr {
-        border-bottom: 1px solid #2a2a2a;
+      .custom-grid {
+        grid-template-columns: 1fr;
       }
 
-      .specs-table tr:last-child {
-        border-bottom: none;
+      .fullset-wrapper {
+        flex-direction: column;
       }
 
-      .specs-table td {
-        padding: 14px 10px;
-        font-size: 0.95rem;
+      .fullset-image-col {
+        max-width: 100%;
       }
 
-      .specs-table td.label {
-        font-weight: bold;
-        color: #aaa;
-        width: 40%;
+      .specs-core-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .specs-table td.value {
-        color: #fff;
+      .order-layout {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .trust-grid {
+        grid-template-columns: 1fr;
       }
 
-      .specs-table td.value strong {
-        color: var(--primary-red);
-      }
-      .warranty-section {
-        background: #0d0d0d;
-        padding: 80px 0;
-        border-bottom: 1px solid #333;
+      .qa-grid {
+        grid-template-columns: 1fr;
       }
 
-      .warranty-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
+      .qa-img-wrapper {
+        height: 260px;
+      }
+
+      .specs-core-grid {
+        grid-template-columns: 1fr;
       }
 
       .warranty-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-        margin-top: 20px;
+        grid-template-columns: 1fr;
       }
 
-      .warranty-card {
-        background: #161616;
-        border: 1px solid #252525;
-        border-radius: 12px;
-        padding: 30px 20px;
-        text-align: center;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
+      .sec-title {
+        font-size: 1.6rem;
       }
 
-      .warranty-card:hover {
-        border-color: var(--primary-red);
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(218, 2, 14, 0.1);
+      .fullset-wrapper {
+        padding: 20px;
       }
 
-      .warranty-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: var(--primary-red);
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
+      .order-form {
+        padding: 20px;
       }
+    }
+  </style>
+</head>
 
-      .warranty-card:hover::before {
-        transform: scaleX(1);
-      }
+<body>
+  <header>
+    <div class="logo">G-SHOCK <span>MAN UTD</span></div>
+    <nav>
+      <a href="#order-section" class="btn-buy" style="padding: 0.5rem 1rem">Mua Ngay</a>
+    </nav>
+  </header>
 
-      .warranty-icon {
-        width: 70px;
-        height: 70px;
-        background: rgba(218, 2, 14, 0.1);
-        color: var(--primary-red);
-        font-size: 2rem;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 20px auto;
-        border: 1px solid rgba(218, 2, 14, 0.2);
-      }
+  <div id="fake-order-popup">
+    <div class="order-icon">
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+    <div class="order-info">
+      <span id="order-text"></span>
+      <span class="order-time">Vừa xong</span>
+    </div>
+  </div>
 
-      .warranty-card h3 {
-        font-size: 1.2rem;
-        color: #fff;
-        margin-bottom: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-
-      .warranty-card p {
-        font-size: 0.9rem;
-        color: #aaa;
-        line-height: 1.6;
-      }
-
-      .fb-comments-section {
-        background: #18191a; /* Màu nền Dark Mode của Facebook */
-        padding: 60px 0;
-        border-top: 1px solid #3a3b3c;
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-      }
-
-      .fb-container {
-        max-width: 750px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* Thanh đếm số bình luận phía trên */
-      .fb-header {
-        border-bottom: 1px solid #3a3b3c;
-        padding-bottom: 12px;
-        margin-bottom: 20px;
-        font-size: 0.95rem;
-        color: #e4e6eb;
-        font-weight: 600;
-      }
-
-      .fb-comment-item {
-        display: flex;
-        gap: 12px;
-        margin-bottom: 20px;
-        align-items: flex-start;
-      }
-
-      .fb-avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-        flex-shrink: 0;
-      }
-
-      .fb-comment-body {
-        flex-grow: 1;
-      }
-
-      /* Khối nội dung bong bóng bình luận */
-      .fb-comment-bubble {
-        background-color: #3a3b3c;
-        border-radius: 18px;
-        padding: 10px 14px;
-        display: inline-block;
-        max-width: 100%;
-        position: relative;
-      }
-
-      .fb-user-name {
-        font-weight: 600;
-        color: #e4e6eb;
-        font-size: 0.85rem;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-        margin-bottom: 2px;
-      }
-
-      /* Tích xanh chính chủ */
-      .fb-user-name .v-badge {
-        color: #1877f2;
-        font-size: 0.8rem;
-      }
-
-      .fb-comment-text {
-        color: #e4e6eb;
-        font-size: 0.9rem;
-        line-height: 1.4;
-        word-break: break-word;
-      }
-
-      /* Khối hiển thị số Like ở góc bong bóng */
-      .fb-like-count-badge {
-        position: absolute;
-        bottom: -10px;
-        right: 10px;
-        background: #242526;
-        border: 1px solid #3a3b3c;
-        padding: 2px 6px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        font-size: 0.75rem;
-        color: #b0b3b8;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-      }
-
-      .fb-like-count-badge .like-icons {
-        color: #1877f2;
-      }
-
-      /* Các nút tương tác bên dưới bình luận: Thích, Phản hồi, Thời gian */
-      .fb-comment-actions {
-        padding-left: 12px;
-        margin-top: 4px;
-        font-size: 0.75rem;
-        color: #b0b3b8;
-        display: flex;
-        gap: 12px;
-        align-items: center;
-      }
-
-      .fb-action-btn {
-        color: #b0b3b8;
-        text-decoration: none;
-        font-weight: bold;
-        cursor: pointer;
-      }
-
-      .fb-action-btn:hover {
-        text-decoration: underline;
-      }
-
-      .fb-action-btn.liked {
-        color: #1877f2;
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <div class="logo">G-SHOCK <span>MAN UTD</span></div>
-      <nav>
-        <a href="#order-section" class="btn-buy" style="padding: 0.5rem 1rem"
-          >Mua Ngay</a
-        >
-      </nav>
-    </header>
-
-    <div id="fake-order-popup">
-      <div class="order-icon">
-        <i class="fas fa-shopping-cart"></i>
+  <section class="hero">
+    <div class="hero-container">
+      <!-- Cột hiển thị hình ảnh đồng hồ thực tế -->
+      <div class="hero-image-col">
+        <div class="hero-image-card">
+          <span class="hero-img-badge"><i class="fas fa-fire"></i> Bản Giới Hạn</span>
+          <img src="./mu-4.jpg" alt="Đồng hồ G-Shock x Manchester United Fullbox" class="hero-watch-img" />
+          <div class="hero-image-caption">
+            <i class="fas fa-gift"></i> Tặng kèm dây thép + Dụng cụ thay
+          </div>
+        </div>
       </div>
-      <div class="order-info">
-        <span id="order-text"></span>
-        <span class="order-time">Vừa xong</span>
+
+      <!-- Cột thông tin sản phẩm, giá & đặt mua -->
+      <div class="hero-content-col">
+        <div class="promo-badge">
+          <i class="fas fa-bolt"></i> GIẢM GIÁ ĐẶC BIỆT 60%
+        </div>
+
+        <h1 class="hero-title">
+          G-SHOCK x MANCHESTER UNITED
+          <span>PHIÊN BẢN GIỚI HẠN ĐỘC QUYỀN</span>
+        </h1>
+
+        <!-- Khối giá hiển thị trực tiếp -->
+        <div class="price-box">
+          <span class="new-price">889.000đ</span>
+          <span class="old-price">2.222.000đ</span>
+          <span class="discount-pill">-60% OFF</span>
+        </div>
+
+        <!-- Đồng hồ đếm ngược thu nhỏ -->
+        <div class="countdown-container">
+          <div class="countdown-title"><i class="fas fa-clock"></i> Ưu đãi kết thúc sau:</div>
+          <div class="timer">
+            <div class="time-box">
+              <span id="hours">02</span>
+              <label>Giờ</label>
+            </div>
+            <span class="timer-colon">:</span>
+            <div class="time-box">
+              <span id="minutes">45</span>
+              <label>Phút</label>
+            </div>
+            <span class="timer-colon">:</span>
+            <div class="time-box">
+              <span id="seconds">30</span>
+              <label>Giây</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Các cam kết nhanh -->
+        <ul class="hero-highlights">
+          <li><i class="fas fa-check-circle"></i> Xem hàng & kiểm tra trước khi thanh toán</li>
+          <li><i class="fas fa-check-circle"></i> Bảo hành 5 năm - Miễn phí thay pin trọn đời</li>
+        </ul>
+
+        <!-- Nút đặt mua trực tiếp -->
+        <a href="#order-section" class="btn-buy btn-hero-cta">
+          <i class="fas fa-shopping-cart"></i> ĐẶT MUA NGAY - 889K
+        </a>
       </div>
     </div>
+  </section>
 
-    <section class="hero">
-      <div class="promo-badge">
-        <i class="fas fa-fire"></i> GIẢM GIÁ LỚN 60% - Tặng kèm dây đeo kim loại
-        cao cấp
-      </div>
-
-      <h1>
-        G-SHOCK x MANCHESTER UNITED<br /><span
-          >PHIÊN BẢN GIỚI HẠN <br />
-          ĐỘC QUYỀN</span
-        >
-      </h1>
-
-      <!-- <p
-        style="font-size: 1.2rem; max-width: 700px; color: #ddd; margin: 0 auto"
-      >
-        Cơ hội duy nhất sở hữu siêu phẩm GA-2100 Custom mang linh hồn Quỷ Đỏ với
-        mức giá không tưởng.
-      </p> -->
-
-      <div class="price-box">
-        <span class="old-price">2.222.000đ</span>
-        <span class="new-price">889.000đ</span>
-      </div>
-
-      <div class="countdown-container">
-        <div class="countdown-title">Ưu đãi kết thúc sau:</div>
-        <div class="timer">
-          <div class="time-box">
-            <span id="hours">02</span>
-            <label>Giờ</label>
+  <!-- 1. THANH THÔNG TIN YÊN TÂM MUA HÀNG (ĐỒNG KIỂM COD, ĐỔI MỚI, FREESHIP, BẢO HÀNH) -->
+  <section class="trust-bar-section">
+    <div class="section-container">
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon"><i class="fas fa-eye"></i></div>
+          <div class="trust-text">
+            <h4>Đồng Kiểm Khi Nhận</h4>
+            <p>Mở hộp, đeo thử trên tay ưng ý mới thanh toán</p>
           </div>
-          <div class="time-box">
-            <span id="minutes">45</span>
-            <label>Phút</label>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon"><i class="fas fa-truck-fast"></i></div>
+          <div class="trust-text">
+            <h4>Freeship Toàn Quốc</h4>
+            <p>Giao hỏa tốc 1-3 ngày, đóng 2 lớp chống sốc</p>
           </div>
-          <div class="time-box">
-            <span id="seconds">30</span>
-            <label>Giây</label>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon"><i class="fas fa-sync-alt"></i></div>
+          <div class="trust-text">
+            <h4>1 Đổi 1 Trong 30 Ngày</h4>
+            <p>Lỗi nhà sản xuất hoặc hoàn thiện đổi mới tận nhà</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon"><i class="fas fa-shield-halved"></i></div>
+          <div class="trust-text">
+            <h4>Bảo Hành 5 Năm</h4>
+            <p>Bảo hành máy 5 năm, miễn phí thay pin trọn đời</p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <a
-        href="#order-section"
-        class="btn-buy"
-        style="font-size: 1.2rem; padding: 1.2rem 3rem"
-      >
-        <i class="fas fa-bolt"></i> Nhận Ưu Đãi Ngay
-      </a>
-    </section>
-
-    <section class="container" id="gallery">
-      <h2 class="section-title">Chi Tiết <span>Sản Phẩm</span></h2>
-
-      <div class="product-grid">
-        <!-- Ảnh 1 -->
-        <div class="product-card">
-          <img src="./đayo.jpg" alt="G-Shock MU trên tay" />
-          <div class="product-info">
-            <h3>Thiết kế Core Guard Chắc Chắn</h3>
-          </div>
-        </div>
-        <!-- Ảnh 2 -->
-        <div class="product-card">
-          <img src="./day-thep.jpg" alt="Fullbox G-Shock MU" />
-          <div class="product-info">
-            <h3>Lịch lãm - Sang Trọng</h3>
-          </div>
-        </div>
-        <!-- Ảnh 3 -->
-        <div class="product-card">
-          <img src="./matsau.jpg" alt="Cận cảnh mặt đồng hồ" />
-          <div class="product-info">
-            <h3>Thể thao - Cá tính</h3>
-          </div>
-        </div>
-
-        <!-- Ảnh 4 -->
-        <div class="product-card">
-          <img src="./2-dh.jpg" alt="Mặt lưng đồng hồ" />
-          <div class="product-info">
-            <h3>Miễn phí đổi trả 1 tháng nếu có lỗi của nhà sản xuất</h3>
-          </div>
-        </div>
+  <!-- 3. TRÌNH BÀY RÕ RÀNG TRỌN BỘ HÀNG NHẬN ĐƯỢC (1 ĐỒNG HỒ + 2 KIỂU DÂY) -->
+  <section class="fullset-section" id="fullset-info">
+    <div class="section-container">
+      <div class="sec-title-box">
+        <span class="sec-badge"><i class="fas fa-box-open"></i> Mở Hộp Thực Tế</span>
+        <h2 class="sec-title">Trọn Bộ Sản Phẩm <span>Bạn Sẽ Nhận Được</span></h2>
+        <p class="sec-subtitle">1 Chiếc Đồng Hồ Duy Nhất - Biến Hóa Linh Hoạt 2 Phong Cách Dây</p>
       </div>
-    </section>
 
-    <section class="features">
-      <div class="container">
-        <div class="feature-list">
-          <div class="feature-item">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Chống Va Đập</h3>
-            <p>Cấu trúc bảo vệ lõi siêu bền bỉ.</p>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-tint"></i>
-            <h3>Chống Nước 20Bar</h3>
-            <p>Thoải mái bơi lội và hoạt động dưới nước.</p>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-medal"></i>
-            <h3>Bản Giới Hạn</h3>
-            <p>Dành riêng cho những người hâm mộ Quỷ Đỏ.</p>
-          </div>
-          <div class="feature-item">
-            <i class="fa fa-credit-card"></i>
-            <h3>Đầy Đủ Sổ Thẻ Bảo Hành</h3>
-            <!-- <p>Dành riêng cho những người hâm mộ Quỷ Đỏ.</p> -->
+      <div class="fullset-wrapper">
+        <div class="fullset-image-col">
+          <div class="fullset-img-box">
+            <span class="fullset-tag"><i class="fas fa-camera"></i> Ảnh Thật Trọn Bộ Hàng</span>
+            <img src="./2-dh.jpg" alt="Trọn bộ đồng hồ G-Shock MU và phụ kiện dây thép" />
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="specs-section">
-      <div class="specs-container">
-        <h2 class="section-title">Thông Số <span>Kỹ Thuật</span></h2>
+        <div class="fullset-content-col">
+          <h3>Bao Gồm Đầy Đủ <span> Phụ Kiện</span></h3>
+          <p class="fullset-desc">Được đóng gói cẩn thận trong hộp thiếc nguyên bản, sẵn sàng làm quà tặng hoặc tự
+            thưởng cho bản thân:</p>
 
-        <div class="specs-wrapper">
-          <div class="specs-table-box">
-            <table class="specs-table">
-              <tr>
-                <td class="label">Dòng máy</td>
-                <td class="value">
-                  G-Shock GA-2100 Series (Bản độ Custom cao cấp)
-                </td>
-              </tr>
-              <tr>
-                <td class="label">Phiên bản</td>
-                <td class="value">
-                  <strong>Manchester United Limited Edition</strong>
-                </td>
-              </tr>
-              <tr>
-                <td class="label">Chất liệu vỏ / khung</td>
-                <td class="value">
-                  Cấu trúc bảo vệ lõi carbon (Carbon Core Guard) siêu nhẹ, siêu
-                  bền
-                </td>
-              </tr>
-              <tr>
-                <td class="label">Chất liệu dây</td>
-                <td class="value">
-                  Dây Resin nhám bền bỉ +
-                  <em>Tặng kèm bộ dây kim loại cao cấp</em>
-                </td>
-              </tr>
-              <tr>
-                <td class="label">Mặt kính</td>
-                <td class="value">
-                  Kính khoáng (Mineral Glass) cường lực chống trầy xước tốt
-                </td>
-              </tr>
-              <tr>
-                <td class="label">Size mặt</td>
-                <td class="value">
-                  42 -44mm ( tương đương với 41mm ở đồng hồ thường. phù hợp size
-                  tay từ 16cm trở lên )
-                </td>
-              </tr>
-              <tr>
-                <td class="label">Chống nước</td>
-                <td class="value">
-                  <strong>200 mét (20 Bar)</strong> - Thoải mái đi mưa, rửa tay,
-                  bơi lội
-                </td>
-              </tr>
-              <tr>
-                <td class="label">Bộ máy</td>
-                <td class="value">
-                  Quartz (Pin) chuẩn Nhật Bản - Độ chính xác ±15 giây một tháng
-                </td>
-              </tr>
-              <tr>
-                <td class="label">Tính năng cốt lõi</td>
-                <td class="value">
-                  Đèn LED cực sáng, Giờ thế giới (31 múi giờ), Đồng hồ bấm giờ
-                  1/100 giây, 5 chế độ báo thức, Lịch tự động hoàn toàn
-                </td>
-              </tr>
-              <tr>
-                <td class="label">Kích thước vỏ</td>
-                <td class="value">
-                  48.5 × 45.4 × 11.8 mm (Độ dày lý tưởng, ôm gọn cổ tay)
-                </td>
-              </tr>
-              <tr>
-                <td class="label">Trọng lượng</td>
-                <td class="value">
-                  Chỉ 51g (Cảm giác đeo vô cùng nhẹ nhàng, thoải mái)
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
+          <ul class="fullset-list">
+            <li class="fullset-item">
+              <div class="fullset-num">1</div>
+              <div class="fullset-item-text">
+                <strong>01 Thân đồng hồ G-Shock GA-2100 Custom MU</strong>
+                <span>Lắp sẵn bộ dây cao su thể thao màu đỏ năng động, trẻ trung</span>
+              </div>
+            </li>
+            <li class="fullset-item">
+              <div class="fullset-num">2</div>
+              <div class="fullset-item-text">
+                <strong>01 Bộ dây kim loại thép đúc 316L cao cấp (TẶNG KÈM)</strong>
+                <span>Trị giá 350.000đ, chất thép phay xước đầm tay, lịch lãm phong cách doanh nhân</span>
+              </div>
+            </li>
+            <li class="fullset-item">
+              <div class="fullset-num">3</div>
+              <div class="fullset-item-text">
+                <strong>01 Hộp thiếc lục giác G-Shock + Hộp giấy bảo vệ bên ngoài</strong>
+                <span>Đầy đủ mút đệm chống sốc, tem mác và sách hướng dẫn sử dụng</span>
+              </div>
+            </li>
+            <li class="fullset-item">
+              <div class="fullset-num">4</div>
+              <div class="fullset-item-text">
+                <strong>01 Thẻ bảo hành 5 năm</strong>
+                <span>Cam kết bảo hành bộ máy 5 năm, miễn phí thay pin trọn đời</span>
+              </div>
+            </li>
+          </ul>
 
-    <section class="warranty-section">
-      <div class="warranty-container">
-        <h2 class="section-title">
-          Chính Sách <span>Bảo Hành & Cam Kết</span>
-        </h2>
-
-        <div class="warranty-grid">
-          <div class="warranty-card">
-            <div class="warranty-icon">
-              <i class="fas fa-shield-alt"></i>
+          <div class="fullset-alert-box">
+            <i class="fas fa-lightbulb"></i>
+            <div>
+              <strong>LƯU Ý QUAN TRỌNG:</strong> Bạn nhận được <strong>01 chiếc đồng hồ duy nhất</strong> kèm <strong>02
+                bộ dây khác nhau</strong> để dễ dàng thay đổi theo hoàn cảnh (Dây kim loại khi đi làm/sự kiện & Dây cao
+              su đỏ khi chơi thể thao/đi chơi).
             </div>
-            <h3>Bảo Hành 5 Năm</h3>
-            <p>
-              Bảo hành bộ máy và pin lên đến 5 năm kể từ ngày mua. Hỗ trợ thay
-              pin hoàn toàn miễn phí trọn đời sản phẩm.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. HÌNH ẢNH THỰC TẾ & MỖI ẢNH GIẢI ĐÁP 1 BĂN KHOĂN CỦA KHÁCH HÀNG -->
+  <section class="qa-section" id="qa-gallery">
+    <div class="section-container">
+      <div class="sec-title-box">
+        <span class="sec-badge"><i class="fas fa-question-circle"></i> Giải Đáp Băn Khoăn</span>
+        <h2 class="sec-title">Hình Ảnh Thực Tế & <span>Trải Nghiệm Đeo</span></h2>
+        <p class="sec-subtitle">Mỗi bức ảnh trả lời một câu hỏi quan trọng nhất trước khi bạn quyết định mua hàng</p>
+      </div>
+
+      <div class="qa-grid">
+        <!-- Card 1: Vừa tay không -->
+        <div class="qa-card">
+          <div class="qa-img-wrapper">
+            <span class="qa-tag"><i class="fas fa-hand"></i> Size Mặt & Form Dáng</span>
+            <img src="./mu-1.png" alt="Đồng hồ G-Shock MU dây đỏ đeo trên tay" />
+          </div>
+          <div class="qa-content">
+            <div class="qa-question">
+              <i class="fas fa-circle-question"></i>
+              <span>1. Đeo có vừa tay không? Có bị to thô không?</span>
+            </div>
+            <p class="qa-answer">
+              <strong>Rất vừa và ôm tay!</strong> Đường kính vỏ 42-44mm (tương đương mặt 41mm ở đồng hồ thường). Độ mỏng
+              chỉ 11.8mm và nặng vỏn vẹn 51g. Thiết kế càng cong công thái học giúp <strong>cổ tay từ 15.5cm đến
+                18.5cm</strong> đeo vô cùng gọn gàng, tôn dáng cổ tay nam tính.
             </p>
           </div>
+        </div>
 
-          <div class="warranty-card">
-            <div class="warranty-icon">
-              <i class="fas fa-sync-alt"></i>
+        <!-- Card 2: Dây kim loại trông thế nào -->
+        <div class="qa-card">
+          <div class="qa-img-wrapper">
+            <span class="qa-tag"><i class="fas fa-gem"></i> Sang Trọng & Lịch Lãm</span>
+            <img src="./daythep-lentay.jpg" alt="Đồng hồ G-Shock MU lắp dây kim loại trên tay" />
+          </div>
+          <div class="qa-content">
+            <div class="qa-question">
+              <i class="fas fa-circle-question"></i>
+              <span>2. Lắp dây kim loại trông thực tế thế nào?</span>
             </div>
-            <h3>1 Đổi 1 Trong 30 Ngày</h3>
-            <p>
-              Nếu sản phẩm xuất hiện bất kỳ lỗi nào từ nhà sản xuất hoặc lỗi
-              hoàn thiện custom, bên em hỗ trợ đổi mới 100% miễn phí tận nhà.
+            <p class="qa-answer">
+              <strong>Đầm chắc, sang trọng như đồng hồ xa xỉ!</strong> Dây thép không gỉ 316L đúc đặc với bề mặt phay
+              xước mờ chống bám vân tay và chống trầy xước. Khi lắp dây thép, chiếc đồng hồ biến thành phụ kiện đẳng
+              cấp, cực kỳ ăn khớp với áo sơ mi, polo hay âu phục công sở.
             </p>
           </div>
+        </div>
 
-          <div class="warranty-card">
-            <div class="warranty-icon">
-              <i class="fas fa-eye"></i>
+        <!-- Card 3: Đổi dây ra sao -->
+        <div class="qa-card">
+          <div class="qa-img-wrapper">
+            <span class="qa-tag"><i class="fas fa-wrench"></i> Thao Tác 30 Giây</span>
+            <img src="./mu-6.png" alt="Mặt sau đồng hồ và chốt thay dây thông minh" />
+          </div>
+          <div class="qa-content">
+            <div class="qa-question">
+              <i class="fas fa-circle-question"></i>
+              <span>3. Đổi dây có khó không? Tự làm ở nhà được không?</span>
             </div>
-            <h3>Xem Hàng Trước - Trả Tiền Sau</h3>
-            <p>
-              Shipper giao tới, bạn được mở hộp, lên tay kiểm tra rồi mới trả
-              tiền.
+            <p class="qa-answer">
+              <strong>Cực kỳ dễ, chỉ mất 30 giây!</strong> Khung dây tích hợp lẫy chốt thông minh (Quick-Release) và
+              shop gửi kèm sẵn bộ tua vít, que chốt mini. Bạn chỉ cần dùng đầu gạt nhẹ lẫy là dây tự tháo rời, sau đó
+              gắn dây mới vào là xong ngay tại nhà, không cần mang ra tiệm.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4: Mặt đồng hồ có dễ nhìn giờ không -->
+        <div class="qa-card">
+          <div class="qa-img-wrapper">
+            <span class="qa-tag"><i class="fas fa-eye"></i> Độ Hiển Thị Sắc Nét</span>
+            <img src="./mu-5.jpg" alt="Cận cảnh mặt số đồng hồ G-Shock MU" />
+          </div>
+          <div class="qa-content">
+            <div class="qa-question">
+              <i class="fas fa-circle-question"></i>
+              <span>4. Mặt đồng hồ có dễ đọc giờ cả ngày lẫn đêm không?</span>
+            </div>
+            <p class="qa-answer">
+              <strong>Rất rõ ràng và tiện lợi!</strong> Mặt số đỏ tương phản nổi bật với kim cọc màu trắng phủ dạ quang
+              phát sáng trong bóng tối. Màn hình LCD kỹ thuật số hiển thị rõ thứ, ngày, giờ, phút điện tử. Tích hợp đèn
+              Double LED chiếu sáng rực rỡ khi ở môi trường tối hoàn toàn.
             </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="order-section">
-      <div class="container">
-        <h2 class="section-title">Đặt Hàng <span>Ngay</span></h2>
+  <!-- 5. SECTION THÔNG SỐ KỸ THUẬT: GIỮ THÔNG SỐ CỐT LÕI Ở NGOÀI, BẤM MỞ PHẦN CÒN LẠI -->
+  <section class="specs-section" id="specs-info">
+    <div class="section-container">
+      <div class="sec-title-box">
+        <span class="sec-badge"><i class="fas fa-sliders"></i> Thông Số Kỹ Thuật</span>
+        <h2 class="sec-title">Chi Tiết Cấu Hình <span>GA-2100 MU</span></h2>
+        <p class="sec-subtitle">5 Thông số mua hàng quan trọng nhất được hiển thị tóm gọn</p>
+      </div>
 
-        <div class="order-wrapper">
-          <div class="product-summary">
-            <!-- <h3>G-Shock x Manchester United</h3> -->
+      <!-- 5 Thông số cốt lõi ngoài màn hình -->
+      <div class="specs-core-grid">
+        <div class="spec-core-item">
+          <div class="spec-core-icon"><i class="fas fa-microchip"></i></div>
+          <div class="spec-core-info">
+            <label>Bộ Máy</label>
+            <strong>Quartz Nhật Bản (Module 5671)</strong>
+          </div>
+        </div>
 
-            <ul class="benefit-list">
-              <li>
-                <i class="fas fa-check-circle"></i> Miễn phí vận chuyển toàn
-                quốc
+        <div class="spec-core-item">
+          <div class="spec-core-icon"><i class="fas fa-water"></i></div>
+          <div class="spec-core-info">
+            <label>Chống Nước</label>
+            <strong>200 Mét (20 Bar) - Thoải mái bơi lặn</strong>
+          </div>
+        </div>
+
+        <div class="spec-core-item">
+          <div class="spec-core-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="spec-core-info">
+            <label>Chất Liệu Vỏ</label>
+            <strong>Lõi Carbon Core Guard + Bezel Thép 316L</strong>
+          </div>
+        </div>
+
+        <div class="spec-core-item">
+          <div class="spec-core-icon"><i class="fas fa-circle-dot"></i></div>
+          <div class="spec-core-info">
+            <label>Mặt Kính</label>
+            <strong>Kính khoáng cường lực Mineral Glass</strong>
+          </div>
+        </div>
+
+        <div class="spec-core-item">
+          <div class="spec-core-icon"><i class="fas fa-ruler-combined"></i></div>
+          <div class="spec-core-info">
+            <label>Kích Thước & Trọng Lượng</label>
+            <strong>48.5 × 45.4 × 11.8 mm | Nặng chỉ 51g</strong>
+          </div>
+        </div>
+
+        <div class="spec-core-item">
+          <div class="spec-core-icon"><i class="fas fa-hand"></i></div>
+          <div class="spec-core-info">
+            <label>Cổ Tay Phù Hợp</label>
+            <strong>Chu vi cổ tay từ 15.5cm - 18.5cm</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mục bấm mở toàn bộ thông số chi tiết còn lại -->
+      <details class="specs-accordion">
+        <summary class="specs-summary-btn">
+          <span><i class="fas fa-sliders"></i> Bấm để xem toàn bộ thông số kỹ thuật chi tiết</span>
+          <i class="fas fa-chevron-down"></i>
+        </summary>
+        <table class="specs-detail-table">
+          <tr>
+            <td class="label">Dòng máy gốc</td>
+            <td class="value">Casio G-Shock GA-2100 Series (Chính hãng Casio)</td>
+          </tr>
+          <tr>
+            <td class="label">Phiên bản chế tác</td>
+            <td class="value">Manchester United Limited Edition Custom</td>
+          </tr>
+          <tr>
+            <td class="label">Đèn chiếu sáng</td>
+            <td class="value">Hai đèn Double LED cực sáng (Đèn mặt đồng hồ + Đèn nền màn hình LCD số)</td>
+          </tr>
+          <tr>
+            <td class="label">Giờ thế giới (World Time)</td>
+            <td class="value">31 múi giờ (48 thành phố + giờ phối hợp quốc tế UTC), bật/tắt tiết kiệm ánh sáng ban ngày
+            </td>
+          </tr>
+          <tr>
+            <td class="label">Đồng hồ bấm giờ</td>
+            <td class="value">Độ chính xác 1/100 giây, đo thời gian trôi qua, thời gian ngắt giờ, thời gian về đích</td>
+          </tr>
+          <tr>
+            <td class="label">Đồng hồ đếm ngược</td>
+            <td class="value">Đơn vị đo 1 giây, khoảng đếm ngược tối đa 24 giờ</td>
+          </tr>
+          <tr>
+            <td class="label">Báo thức & Tín hiệu</td>
+            <td class="value">5 chế độ báo thức hàng ngày + Tín hiệu thời gian tròn giờ</td>
+          </tr>
+          <tr>
+            <td class="label">Lịch tự động</td>
+            <td class="value">Lịch hoàn toàn tự động đến tận năm 2099 (nhận biết năm nhuận)</td>
+          </tr>
+          <tr>
+            <td class="label">Tính năng dịch chuyển kim</td>
+            <td class="value">Kim tự động di chuyển sang một bên để không che khuất màn hình kỹ thuật số</td>
+          </tr>
+          <tr>
+            <td class="label">Tuổi thọ pin</td>
+            <td class="value">Xấp xỉ 3 năm với pin SR726W × 2</td>
+          </tr>
+        </table>
+      </details>
+    </div>
+  </section>
+
+  <!-- 6. SECTION CAM KẾT VÀ BẢO HÀNH -->
+  <section class="warranty-section">
+    <div class="section-container">
+      <div class="sec-title-box">
+        <span class="sec-badge"><i class="fas fa-certificate"></i> Uy Tín & Trách Nhiệm</span>
+        <h2 class="sec-title">Chính Sách <span>Bảo Hành & Cam Kết</span></h2>
+        <p class="sec-subtitle">Đồng hành trọn đời cùng trải nghiệm của bạn</p>
+      </div>
+
+      <div class="warranty-grid">
+        <div class="warranty-card">
+          <div class="warranty-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Bảo Hành 5 Năm</h3>
+          <p>Bảo hành bộ máy và pin lên đến 5 năm kể từ ngày mua.</p>
+        </div>
+
+        <div class="warranty-card">
+          <div class="warranty-icon"><i class="fas fa-sync-alt"></i></div>
+          <h3>1 Đổi 1 Trong 30 Ngày</h3>
+          <p>Nếu sản phẩm xuất hiện bất kỳ lỗi nào từ nhà sản xuất hoặc hoàn thiện custom, bên em hỗ trợ đổi mới 100%
+            miễn phí tận nhà.</p>
+        </div>
+
+        <div class="warranty-card">
+          <div class="warranty-icon"><i class="fas fa-box-open"></i></div>
+          <h3>Đồng Kiểm Khi Nhận (COD)</h3>
+          <p>Shipper giao tới, bạn được mở hộp, lên tay kiểm tra đúng mẫu mã, đúng 2 bộ dây rồi mới trả tiền. Không ưng
+            trả lại không mất phí.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PHẢN HỒI THẬT CÓ ẢNH TỪ KHÁCH HÀNG (ĐƯA LÊN TRƯỚC FORM ĐẶT HÀNG) -->
+  <section class="fb-comments-section" id="reviews">
+    <div class="fb-container">
+      <div class="fb-header">
+        <span>Ý kiến đánh giá từ khách hàng Facebook (1.248 bình luận)</span>
+        <span class="fb-header-filter">Mới nhất ▼</span>
+      </div>
+
+      <!-- Feedback 1: Kèm ảnh đeo dây thép -->
+      <div class="fb-comment-item">
+        <img class="fb-avatar" src="./nam-1.jpg" alt="Avatar" />
+        <div class="fb-comment-body">
+          <div class="fb-comment-bubble">
+            <a href="#" class="fb-user-name">Trần Quốc Hoàng <i class="fas fa-check-circle v-badge"></i> <span
+                class="fb-user-tag">Đã mua hàng</span></a>
+            <p class="fb-comment-text">
+              Hàng nhận được cực kỳ nét nha ae, đúng phôi GA-2100 đập hộp. Đóng gói cẩn thận hộp thiếc chắc chắn, mở ra
+              logo MU đỏ rực nhìn phê thực sự. Tặng kèm bộ dây kim loại lắp vào nhìn như Hublot sang chảnh hẳn! Shipper
+              cho bóc ra xem hàng mới trả tiền nên rất yên tâm.
+            </p>
+            <div class="fb-like-count-badge">
+              <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
+              <span>46</span>
+            </div>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-btn liked">Đã thích</span>
+            <span class="fb-action-btn">Phản hồi</span>
+            <span>1 giờ trước</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feedback 2: Kèm ảnh đeo dây đỏ -->
+      <div class="fb-comment-item">
+        <img class="fb-avatar" src="./nam-2.jpg" alt="Avatar" />
+        <div class="fb-comment-body">
+          <div class="fb-comment-bubble">
+            <a href="#" class="fb-user-name">Nguyễn Tuấn Minh <i class="fas fa-check-circle v-badge"></i> <span
+                class="fb-user-tag">Đã mua hàng</span></a>
+            <p class="fb-comment-text">
+              Ship siêu nhanh luôn shop ơi, đặt hôm qua mà trưa nay shipper đã gọi giao ở HN rồi. Tự thay dây cao su đỏ
+              sang dây kim loại rất dễ, mất có 30s nhờ cái dụng cụ shop gửi kèm. Đeo lên tay vừa vặn, fan MU thì không
+              thể bỏ qua em này!
+            </p>
+            <div class="fb-like-count-badge">
+              <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
+              <span>28</span>
+            </div>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-btn">Thích</span>
+            <span class="fb-action-btn">Phản hồi</span>
+            <span>3 giờ trước</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feedback 3: Kèm ảnh hộp và mặt đồng hồ -->
+      <div class="fb-comment-item">
+        <img class="fb-avatar" src="./nu-1.jpg" alt="Avatar" />
+        <div class="fb-comment-body">
+          <div class="fb-comment-bubble">
+            <a href="#" class="fb-user-name">Lê Thùy Linh <i class="fas fa-check-circle v-badge"></i> <span
+                class="fb-user-tag">Đã mua hàng</span></a>
+            <p class="fb-comment-text">
+              Mua tặng sinh nhật người yêu mà ổng mê tít, suốt ngày đeo chụp ảnh khoe bạn bè 😂 Thấy shop có thẻ bảo
+              hành tận 5 năm với thay pin trọn đời nên cũng yên tâm hẳn. Đóng gói rất đẹp, làm quà tặng thì quá chuẩn
+              bài!
+            </p>
+            <div class="fb-like-count-badge">
+              <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
+              <span>19</span>
+            </div>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-btn">Thích</span>
+            <span class="fb-action-btn">Phản hồi</span>
+            <span>5 giờ trước</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feedback 4: Khách nam đeo chụp chân dung -->
+      <div class="fb-comment-item">
+        <img class="fb-avatar" src="./nam-1.jpg" alt="Avatar" />
+        <div class="fb-comment-body">
+          <div class="fb-comment-bubble">
+            <a href="#" class="fb-user-name">Phạm Hoàng Nam <i class="fas fa-check-circle v-badge"></i> <span
+                class="fb-user-tag">Đã mua hàng</span></a>
+            <p class="fb-comment-text">
+              Đồng hồ đeo đầm tay, thép sáng bóng phay xước sắc sảo. Cổ tay mình 16.5cm đeo cực kỳ vừa vặn. Cho 10/10
+              điểm từ chất lượng sản phẩm đến tư vấn nhiệt tình của shop!
+            </p>
+            <div class="fb-like-count-badge">
+              <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
+              <span>35</span>
+            </div>
+          </div>
+          <div class="fb-comment-actions">
+            <span class="fb-action-btn">Thích</span>
+            <span class="fb-action-btn">Phản hồi</span>
+            <span>7 giờ trước</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. KHU VỰC ĐẶT HÀNG: LÀM RÕ TÓM TẮT ĐƠN HÀNG, TỔNG TIỀN VÀ QUY TRÌNH XỬ LÝ -->
+  <section id="order-section">
+    <div class="section-container">
+      <div class="sec-title-box">
+        <span class="sec-badge"><i class="fas fa-cart-shopping"></i> Ưu Đãi Độc Quyền</span>
+        <h2 class="sec-title">Đặt Hàng <span>Nhận Ưu Đãi Ngay</span></h2>
+        <p class="sec-subtitle">Chỉ áp dụng trong ngày hôm nay - Số lượng có hạn</p>
+      </div>
+
+      <div class="order-layout">
+        <!-- Cột trái: Tóm tắt đơn hàng & Quy trình xử lý của shop -->
+        <div class="order-summary-col">
+          <!-- Bản tóm tắt đầy đủ đơn hàng -->
+          <div class="order-summary-card">
+            <div class="order-summary-header">
+              <i class="fas fa-receipt" style="color: var(--primary-red);"></i>
+              <span>Tóm Tắt Đơn Hàng Của Bạn</span>
+            </div>
+
+            <div class="summary-product-item">
+              <img src="./mu-4.jpg" alt="Đồng hồ G-Shock MU" class="summary-thumb" />
+              <div class="summary-prod-details">
+                <h4>G-Shock GA-2100 Custom Manchester United</h4>
+                <p>Trọn bộ: 01 Đồng hồ + 02 Bộ dây (Dây đỏ & Dây thép) + Dụng cụ thay</p>
+              </div>
+            </div>
+
+            <div class="summary-breakdown">
+              <div class="summary-line">
+                <span>Số lượng:</span>
+                <strong id="summary-quantity-text">1 chiếc</strong>
+              </div>
+              <div class="summary-line highlight">
+                <span>Quà tặng đi kèm:</span>
+                <strong id="summary-discount-text">Tặng kèm 1 dây thép cao cấp</strong>
+              </div>
+              <div class="summary-line">
+                <span>Phí vận chuyển:</span>
+                <strong style="color: #2ecc71;">MIỄN PHÍ (0đ)</strong>
+              </div>
+              <div class="summary-line">
+                <span>Đồng kiểm khi nhận:</span>
+                <strong style="color: #2ecc71;">Được mở hộp kiểm tra</strong>
+              </div>
+            </div>
+
+            <div class="summary-total-box">
+              <span class="lbl">TỔNG THANH TOÁN:</span>
+              <span class="val" id="summary-total-price">889.000đ</span>
+            </div>
+          </div>
+
+          <!-- Quy trình 3 bước xử lý sau khi gửi form -->
+          <div class="order-process-card">
+            <h4><i class="fas fa-clipboard-check"></i> Quy Trình Xử Lý Sau Khi Gửi Đơn</h4>
+            <ul class="process-steps">
+              <li class="process-step-item">
+                <div class="process-step-badge">1</div>
+                <div class="process-step-text">
+                  <strong>Gọi xác nhận đơn hàng</strong>
+                </div>
               </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Tặng kèm hộp đựng dụng cụ
-                thay dây
+              <li class="process-step-item">
+                <div class="process-step-badge">2</div>
+                <div class="process-step-text">
+                  <strong>Đóng gói cẩn thận</strong>
+                </div>
               </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Tặng kèm dây đeo thông minh
-                thép không gỉ cao cấp
+              <li class="process-step-item">
+                <div class="process-step-badge">3</div>
+                <div class="process-step-text">
+                  <strong>Giao hàng & Kiểm tra hàng trước khi thanh toán</strong>
+                </div>
               </li>
             </ul>
-            <!-- <div style="margin-top: 30px; border-radius: 10px; overflow: hidden;">
-                        <img src="./cohopgan.jpg" alt="Đồng hồ MU" style="width: 100%;">
-                    </div> -->
           </div>
-          <p class="price-tag">
-            889.000đ
-            <span
-              style="
-                font-size: 1rem;
-                color: #888;
-                text-decoration: line-through;
-              "
-              >2.500.000đ</span
-            >
-          </p>
+        </div>
+
+        <!-- Cột phải: Form đặt hàng (Logic giữ nguyên 100%) -->
+        <div class="order-form-col">
           <div class="order-form">
+            <h3>Thông Tin Nhận Hàng</h3>
+            <p class="order-form-desc">Vui lòng điền đúng số điện thoại để nhân viên gọi xác nhận đơn</p>
+
             <form id="purchaseForm">
               <div class="form-group">
-                <label for="fullname">Họ và tên *</label>
-                <input
-                  type="text"
-                  id="fullname"
-                  name="fullname"
-                  placeholder="Nhập tên của bạn"
-                  required
-                />
+                <label for="fullname">Họ và tên người nhận *</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Ví dụ: Nguyễn Văn Nam" required />
               </div>
 
               <div class="form-group">
-                <label for="phone">Số điện thoại *</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Ví dụ: 0912345xxx"
-                  required
-                />
+                <label for="phone">Số điện thoại liên hệ *</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ví dụ: 0912345xxx" required />
               </div>
 
               <div class="form-group">
-                <label for="address">Địa chỉ nhận hàng *</label>
-                <textarea
-                  id="address"
-                  name="address"
-                  rows="3"
-                  placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố"
-                  required
-                ></textarea>
+                <label for="address">Địa chỉ giao hàng chi tiết *</label>
+                <textarea id="address" name="address" rows="3"
+                  placeholder="Số nhà, tên đường, thôn/xóm, phường/xã, quận/huyện, tỉnh/thành phố" required></textarea>
               </div>
 
               <div class="form-group">
-                <label for="quantity">Số lượng</label>
+                <label for="quantity">Số lượng đặt mua</label>
                 <select id="quantity" name="quantity">
-                  <option value="1">1 chiếc</option>
-                  <option value="2">2 chiếc (Giảm thêm 5%)</option>
-                  <option value="3">3 chiếc (Giảm thêm 10%)</option>
+                  <option value="1">1 chiếc - 889.000đ (Tặng 1 dây thép)</option>
+                  <option value="2">2 chiếc - 1.689.000đ (Giảm thêm 5% ~ 89.000đ)</option>
+                  <option value="3">3 chiếc - 2.399.000đ (Giảm thêm 10% ~ 268.000đ)</option>
                 </select>
               </div>
 
               <button type="submit" class="btn-submit">
-                <i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG
+                <i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG NGAY
               </button>
             </form>
-            <p
-              style="
-                font-size: 0.8rem;
-                color: #888;
-                margin-top: 15px;
-                text-align: center;
-              "
-            >
-              * Thông tin của bạn được bảo mật tuyệt đối.
+
+            <p style="font-size: 0.8rem; color: #888; margin-top: 15px; text-align: center;">
+              <i class="fas fa-lock" style="color: #2ecc71;"></i> Thông tin của bạn được bảo mật tuyệt đối. Kiểm tra
+              hàng trước khi thanh toán.
             </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="fb-comments-section">
-      <div class="fb-container">
-        <div class="fb-header">Ý kiến phản hồi từ khách hàng từ facebook</div>
+  <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbyb__HY_n8brMccLuprhjwnLkzZV57SIinZvdJuBelya4fgYgt7_cL014KXYpQEm6NV/exec";
+    const form = document.getElementById("purchaseForm");
+    const btnSubmit = form.querySelector(".btn-submit");
 
-        <div class="fb-comment-item">
-          <img class="fb-avatar" src="./nam-1.jpg" alt="Avatar" />
-          <div class="fb-comment-body">
-            <div class="fb-comment-bubble">
-              <a href="#" class="fb-user-name"
-                >Trần Quốc Hoàng <i class="fas fa-check-circle v-badge"></i
-              ></a>
-              <p class="fb-comment-text">
-                Hàng nhận được cực kỳ nét nha ae, đúng phôi GA-2100 đập hộp.
-                Đóng gói cẩn thận, mở ra cái logo MU đỏ rực nhìn phê thực sự.
-                Được tặng thêm bộ dây kim loại lắp vào nhìn như Hublot sang
-                chảnh hẳn!
-              </p>
+    // Cập nhật tóm tắt đơn hàng khi đổi số lượng
+    const qtySelect = document.getElementById("quantity");
+    const summaryQuantityText = document.getElementById("summary-quantity-text");
+    const summaryTotalPrice = document.getElementById("summary-total-price");
+    const summaryDiscountText = document.getElementById("summary-discount-text");
 
-              <div class="fb-like-count-badge">
-                <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
-                <span>42</span>
-              </div>
-            </div>
-            <div class="fb-comment-actions">
-              <span class="fb-action-btn liked">Đã thích</span>
-              <span class="fb-action-btn">Phản hồi</span>
-              <span>1 giờ trước</span>
-            </div>
-          </div>
-        </div>
+    const priceMap = {
+      "1": { text: "1 chiếc", price: "889.000đ", discount: "Tặng kèm 1 dây thép cao cấp", value: 889000 },
+      "2": { text: "2 chiếc (Giảm thêm 5%)", price: "1.689.000đ", discount: "Đã giảm thêm 5% (~89.000đ) + Tặng 2 dây thép", value: 1689000 },
+      "3": { text: "3 chiếc (Giảm thêm 10%)", price: "2.399.000đ", discount: "Đã giảm thêm 10% (~268.000đ) + Tặng 3 dây thép", value: 2399000 }
+    };
 
-        <div class="fb-comment-item">
-          <img class="fb-avatar" src="./nam-2.jpg" alt="Avatar" />
-          <div class="fb-comment-body">
-            <div class="fb-comment-bubble">
-              <a href="#" class="fb-user-name">Nguyễn Tuấn Minh</a>
-              <p class="fb-comment-text">
-                Ship siêu nhanh luôn shop ơi, đặt hôm qua mà trưa nay shipper đã
-                gọi giao ở HN rồi. Cho mở hộp kiểm tra đúng mẫu mới trả tiền nên
-                rất uy tín. Fan Quỷ đỏ là phải săn ngay em này nhé mng.
-              </p>
-
-              <div class="fb-like-count-badge">
-                <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
-                <span>18</span>
-              </div>
-            </div>
-            <div class="fb-comment-actions">
-              <span class="fb-action-btn">Thích</span>
-              <span class="fb-action-btn">Phản hồi</span>
-              <span>3 giờ trước</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="fb-comment-item">
-          <img class="fb-avatar" src="./nu-1.jpg" alt="Avatar" />
-          <div class="fb-comment-body">
-            <div class="fb-comment-bubble">
-              <a href="#" class="fb-user-name">Lê Thùy Linh</a>
-              <p class="fb-comment-text">
-                Mua tặng sinh nhật người yêu mà ổng mê tít, suốt ngày đeo chụp
-                ảnh khoe bạn bè 😂 Thấy shop bảo hành tận 5 năm với thay pin
-                trọn đời nên cũng yên tâm hẳn.
-              </p>
-
-              <div class="fb-like-count-badge">
-                <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
-                <span>9</span>
-              </div>
-            </div>
-            <div class="fb-comment-actions">
-              <span class="fb-action-btn">Thích</span>
-              <span class="fb-action-btn">Phản hồi</span>
-              <span>5 giờ trước</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbyb__HY_n8brMccLuprhjwnLkzZV57SIinZvdJuBelya4fgYgt7_cL014KXYpQEm6NV/exec";
-      const form = document.getElementById("purchaseForm");
-      const btnSubmit = form.querySelector(".btn-submit");
-
-      form.addEventListener("submit", (e) => {
-        fbq("track", "InitiateCheckout");
-        e.preventDefault();
-
-        // Hiệu ứng đang gửi
-        btnSubmit.disabled = true;
-        btnSubmit.innerHTML =
-          '<i class="fas fa-spinner fa-spin"></i> ĐANG GỬI...';
-
-        // Gửi dữ liệu bằng Fetch API
-        fetch(scriptURL, {
-          method: "POST",
-          body: new FormData(form),
-        })
-          .then((response) => {
-            alert(
-              "Chúc mừng! Đơn hàng của bạn đã được lưu thành công vào hệ thống. Chúng tôi sẽ sớm liên hệ!",
-            );
-            btnSubmit.disabled = false;
-            btnSubmit.innerHTML =
-              '<i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG';
-            fbq("track", "Purchase", {
-              value: 889000,
-              currency: "VND",
-            });
-            form.reset();
-          })
-          .catch((error) => {
-            console.error("Lỗi!", error.message);
-            alert("Có lỗi xảy ra. Vui lòng thử lại hoặc gọi hotline!");
-            btnSubmit.disabled = false;
-            btnSubmit.innerHTML =
-              '<i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG';
-          });
+    if (qtySelect) {
+      qtySelect.addEventListener("change", (e) => {
+        const val = e.target.value;
+        const info = priceMap[val] || priceMap["1"];
+        if (summaryQuantityText) summaryQuantityText.textContent = info.text;
+        if (summaryTotalPrice) summaryTotalPrice.textContent = info.price;
+        if (summaryDiscountText) summaryDiscountText.textContent = info.discount;
       });
+    }
 
-      const customers = [
-        { name: "Nguyễn Văn Hùng", city: "Hà Nội" },
-        { name: "Trần Thế Anh", city: "TP. Hồ Chí Minh" },
-        { name: "Lê Minh Tâm", city: "Đà Nẵng" },
-        { name: "Phạm Hoàng Long", city: "Hải Phòng" },
-        { name: "Vũ Đức Trọng", city: "Bình Dương" },
-        { name: "Đặng Thu Thảo", city: "Cần Thơ" },
-        { name: "Ngô Quốc Bảo", city: "Đồng Nai" },
-        { name: "Hoàng Anh Tuấn", city: "Huế" },
-        { name: "Bùi Tuyết Mai", city: "Quảng Ninh" },
-      ];
+    form.addEventListener("submit", (e) => {
+      fbq("track", "InitiateCheckout");
+      e.preventDefault();
 
-      const popup = document.getElementById("fake-order-popup");
-      const orderText = document.getElementById("order-text");
+      // Hiệu ứng đang gửi
+      btnSubmit.disabled = true;
+      btnSubmit.innerHTML =
+        '<i class="fas fa-spinner fa-spin"></i> ĐANG GỬI...';
 
-      function showOrder() {
-        // Chọn ngẫu nhiên khách hàng
-        const randomCust =
-          customers[Math.floor(Math.random() * customers.length)];
+      // Gửi dữ liệu bằng Fetch API
+      fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+      })
+        .then((response) => {
+          alert(
+            "Chúc mừng! Đơn hàng của bạn đã được lưu thành công vào hệ thống. Chúng tôi sẽ sớm liên hệ!",
+          );
+          btnSubmit.disabled = false;
+          btnSubmit.innerHTML =
+            '<i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG NGAY';
+          const curQty = qtySelect ? qtySelect.value : "1";
+          const curVal = priceMap[curQty] ? priceMap[curQty].value : 889000;
+          fbq("track", "Purchase", {
+            value: curVal,
+            currency: "VND",
+          });
+          form.reset();
+          if (summaryQuantityText) summaryQuantityText.textContent = "1 chiếc";
+          if (summaryTotalPrice) summaryTotalPrice.textContent = "889.000đ";
+          if (summaryDiscountText) summaryDiscountText.textContent = "Tặng kèm 1 dây thép cao cấp";
+        })
+        .catch((error) => {
+          console.error("Lỗi!", error.message);
+          alert("Có lỗi xảy ra. Vui lòng thử lại hoặc gọi hotline!");
+          btnSubmit.disabled = false;
+          btnSubmit.innerHTML =
+            '<i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG NGAY';
+        });
+    });
 
-        // Cập nhật nội dung
-        orderText.innerHTML = `<strong>${randomCust.name}</strong> (${randomCust.city}) vừa đặt mua thành công </strong>`;
+    const customers = [
+      { name: "Nguyễn Văn Hùng", city: "Hà Nội" },
+      { name: "Trần Thế Anh", city: "TP. Hồ Chí Minh" },
+      { name: "Lê Minh Tâm", city: "Đà Nẵng" },
+      { name: "Phạm Hoàng Long", city: "Hải Phòng" },
+      { name: "Vũ Đức Trọng", city: "Bình Dương" },
+      { name: "Đặng Thu Thảo", city: "Cần Thơ" },
+      { name: "Ngô Quốc Bảo", city: "Đồng Nai" },
+      { name: "Hoàng Anh Tuấn", city: "Huế" },
+      { name: "Bùi Tuyết Mai", city: "Quảng Ninh" },
+    ];
 
-        // Hiển thị popup
-        popup.classList.add("show");
+    const popup = document.getElementById("fake-order-popup");
+    const orderText = document.getElementById("order-text");
 
-        // Sau 5 giây thì ẩn đi
-        setTimeout(() => {
-          popup.classList.remove("show");
-        }, 5000);
-      }
+    function showOrder() {
+      // Chọn ngẫu nhiên khách hàng
+      const randomCust =
+        customers[Math.floor(Math.random() * customers.length)];
 
-      // Lần đầu tiên xuất hiện sau 3 giây vào trang
+      // Cập nhật nội dung
+      orderText.innerHTML = `<strong>${randomCust.name}</strong> (${randomCust.city}) vừa đặt mua thành công </strong>`;
+
+      // Hiển thị popup
+      popup.classList.add("show");
+
+      // Sau 5 giây thì ẩn đi
       setTimeout(() => {
-        showOrder();
+        popup.classList.remove("show");
+      }, 5000);
+    }
 
-        // Sau đó cứ mỗi 15-25 giây lại xuất hiện một lần ngẫu nhiên
-        setInterval(
-          () => {
-            showOrder();
-          },
-          Math.floor(Math.random() * (25000 - 15000 + 1) + 15000),
-        );
-      }, 3000);
-    </script>
+    // Lần đầu tiên xuất hiện sau 3 giây vào trang
+    setTimeout(() => {
+      showOrder();
 
-    <script>
-      function startCountdown() {
-        // Thiết lập thời gian đếm ngược ban đầu: 2 giờ, 45 phút, 00 giây
-        let hours = 2;
-        let minutes = 45;
-        let seconds = 0;
+      // Sau đó cứ mỗi 15-25 giây lại xuất hiện một lần ngẫu nhiên
+      setInterval(
+        () => {
+          showOrder();
+        },
+        Math.floor(Math.random() * (25000 - 15000 + 1) + 15000),
+      );
+    }, 3000);
+  </script>
 
-        // Lấy các thẻ hiển thị ngoài màn hình
-        const hoursElement = document.getElementById("hours");
-        const minutesElement = document.getElementById("minutes");
-        const secondsElement = document.getElementById("seconds");
+  <script>
+    function startCountdown() {
+      // Thiết lập thời gian đếm ngược ban đầu: 2 giờ, 45 phút, 00 giây
+      let hours = 2;
+      let minutes = 45;
+      let seconds = 0;
 
-        // Chạy hàm cập nhật sau mỗi 1 giây (1000ms)
-        const countdownInterval = setInterval(() => {
-          // Trừ đi 1 giây
-          seconds--;
+      // Lấy các thẻ hiển thị ngoài màn hình
+      const hoursElement = document.getElementById("hours");
+      const minutesElement = document.getElementById("minutes");
+      const secondsElement = document.getElementById("seconds");
 
-          // Nếu số giây xuống dưới 0
-          if (seconds < 0) {
-            seconds = 59;
-            minutes--; // Trừ đi 1 phút
+      // Chạy hàm cập nhật sau mỗi 1 giây (1000ms)
+      const countdownInterval = setInterval(() => {
+        // Trừ đi 1 giây
+        seconds--;
 
-            // Nếu số phút xuống dưới 0
-            if (minutes < 0) {
-              minutes = 59;
-              hours--; // Trừ đi 1 giờ
-            }
+        // Nếu số giây xuống dưới 0
+        if (seconds < 0) {
+          seconds = 59;
+          minutes--; // Trừ đi 1 phút
+
+          // Nếu số phút xuống dưới 0
+          if (minutes < 0) {
+            minutes = 59;
+            hours--; // Trừ đi 1 giờ
           }
+        }
 
-          // Nếu hết sạch thời gian (về 00:00:00), tự động reset lại để trang không bị lỗi
-          if (hours < 0) {
-            hours = 2;
-            minutes = 45;
-            seconds = 0;
-          }
+        // Nếu hết sạch thời gian (về 00:00:00), tự động reset lại để trang không bị lỗi
+        if (hours < 0) {
+          hours = 2;
+          minutes = 45;
+          seconds = 0;
+        }
 
-          // Định dạng hiển thị luôn có 2 chữ số (VD: số 5 thành "05")
-          hoursElement.textContent = hours < 10 ? "0" + hours : hours;
-          minutesElement.textContent = minutes < 10 ? "0" + minutes : minutes;
-          secondsElement.textContent = seconds < 10 ? "0" + seconds : seconds;
-        }, 1000);
-      }
+        // Định dạng hiển thị luôn có 2 chữ số (VD: số 5 thành "05")
+        hoursElement.textContent = hours < 10 ? "0" + hours : hours;
+        minutesElement.textContent = minutes < 10 ? "0" + minutes : minutes;
+        secondsElement.textContent = seconds < 10 ? "0" + seconds : seconds;
+      }, 1000);
+    }
 
-      // Kích hoạt bộ đếm ngược ngay khi trang tải xong
-      window.addEventListener("DOMContentLoaded", startCountdown);
-    </script>
+    // Kích hoạt bộ đếm ngược ngay khi trang tải xong
+    window.addEventListener("DOMContentLoaded", startCountdown);
+  </script>
 
-    <footer>
-      <p>&copy; 2026 Watch Store - G-Shock Custom Collection</p>
-      <p>Đ/c: 26 Trần Phú Móng Cái Quảng Ninh</p>
-    </footer>
-  </body>
+  <footer>
+    <p>&copy; 2026 Watch Store - G-Shock Custom Collection</p>
+    <p>Đ/c: 26 Trần Phú Móng Cái Quảng Ninh</p>
+  </footer>
+</body>
+
 </html>
