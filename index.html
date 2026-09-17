@@ -55,6 +55,8 @@
         --dark-black: #111111;
         --silver: #c0c0c0;
         --white: #ffffff;
+        --gray-bg: #1a1a1a;
+        --accent-text: #ff6873;
       }
 
       * {
@@ -94,34 +96,27 @@
         color: var(--primary-red);
       }
 
-      /* Hero Section */
+      /* Product introduction */
       .hero {
-        height: 100vh;
-        background:
-          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url("./May\ 2\,\ 2026\,\ 12_46_20\ AM.png") center/cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 124px 20px 64px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
-        text-align: center;
-        padding-top: 80px;
-        padding-left: 8px;
-        padding-right: 8px;
+        gap: 48px;
       }
-
-      .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-      }
-
-      .hero p {
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin-bottom: 2rem;
-      }
+      .hero h1 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.12; margin: 18px 0; letter-spacing: -1px; }
+      .hero h1 span { color: var(--accent-text); display: block; }
+      .hero p { color: #c8c8c8; max-width: 540px; }
+      .eyebrow { color: var(--accent-text); font-weight: 700; letter-spacing: 2px; font-size: .8rem; text-transform: uppercase; }
+      .hero-image { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; border-radius: 18px; border: 1px solid #333; display: block; }
+      .hero .price-box { margin: 24px 0 8px; }
+      .hero .new-price { font-size: 1.6rem; font-weight: 800; }
+      .hero .price-unit { color: #b5b5b5; margin-left: 8px; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 18px; }
+      .btn-secondary { border: 1px solid #666; color: #fff; padding: 1rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 700; }
+      .hero .hero-note { font-size: .85rem; color: #b5b5b5; }
 
       .btn-buy {
         background: var(--primary-red);
@@ -142,7 +137,7 @@
       /* Product Gallery */
       .container {
         max-width: 1200px;
-        margin: 2rem auto;
+        margin: 0 auto;
         padding: 0 20px;
       }
 
@@ -205,8 +200,9 @@
         max-width: 250px;
       }
 
-      .feature-item i {
-        font-size: 2.5rem;
+      .feature-item .ui-icon {
+        width: 40px;
+        height: 40px;
         color: var(--primary-red);
         margin-bottom: 1rem;
       }
@@ -330,7 +326,7 @@
       }
 
       .price-tag {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 20px;
       }
@@ -346,7 +342,7 @@
         gap: 10px;
       }
 
-      .benefit-list i {
+      .benefit-list .ui-icon {
         color: #2ecc71;
       }
 
@@ -358,267 +354,6 @@
 
         .order-form {
           width: 100%;
-        }
-      }
-
-      /* CSS cho phần Comment */
-      .comments-section {
-        background: #111;
-        padding: 60px 0;
-        border-top: 1px solid #333;
-      }
-
-      .comment-container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .comment-item {
-        background: #1a1a1a;
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-left: 4px solid var(--primary-red);
-        display: flex;
-        gap: 15px;
-        animation: fadeInUp 0.5s ease forwards;
-      }
-
-      .user-avatar {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: #333;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: var(--white);
-        flex-shrink: 0;
-        border: 2px solid #444;
-      }
-
-      .comment-content {
-        flex-grow: 1;
-      }
-
-      .user-name {
-        font-weight: bold;
-        color: var(--primary-red);
-        margin-bottom: 5px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .user-name span {
-        font-size: 0.8rem;
-        color: #888;
-        font-weight: normal;
-      }
-
-      .rating {
-        color: #ffc107;
-        margin-bottom: 8px;
-        font-size: 0.9rem;
-      }
-
-      .comment-text {
-        font-size: 0.95rem;
-        color: #ddd;
-      }
-
-      .verified-buyer {
-        font-size: 0.75rem;
-        color: #2ecc71;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        margin-top: 5px;
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      #fake-order-popup {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        background: #ffffff;
-        color: #333;
-        padding: 8px 12px;
-        border-radius: 8px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        border-left: 5px solid #da020e;
-        transform: translateX(-150%);
-        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-        max-width: 320px;
-        pointer-events: none;
-      }
-
-      #fake-order-popup.show {
-        transform: translateX(0);
-      }
-
-      .order-icon {
-        background: #da020e;
-        color: white;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-      }
-
-      .order-info {
-        font-size: 0.85rem;
-        line-height: 1.4;
-      }
-
-      .order-info strong {
-        color: #da020e;
-      }
-
-      .order-time {
-        display: block;
-        font-size: 0.75rem;
-        color: #888;
-        margin-top: 2px;
-      }
-
-      /* CSS cập nhật cho Hero Section */
-      .hero {
-        min-height: 100vh;
-        background:
-          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url("./May\ 2\,\ 2026\,\ 12_46_20\ AM.png") center/cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 120px 20px 60px 20px;
-      }
-
-      /* Tag giảm giá 60% nổi bật */
-      .promo-badge {
-        background: #ffcc00;
-        color: #111;
-        font-weight: 900;
-        font-size: 1rem;
-        padding: 8px 20px;
-        border-radius: 50px;
-        text-transform: uppercase;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
-        animation: pulse 1.5s infinite;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .hero h1 {
-        /* font-size: 1rem; */
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        line-height: 1.2;
-      }
-
-      .hero h1 span {
-        color: var(--primary-red);
-      }
-
-      .hero .price-box {
-        margin: 1.5rem 0;
-        font-size: 1.5rem;
-      }
-
-      .hero .old-price {
-        text-decoration: line-through;
-        color: #888;
-        margin-right: 15px;
-      }
-
-      .hero .new-price {
-        color: #2ecc71;
-        font-size: 2.5rem;
-        font-weight: bold;
-      }
-
-      /* Đồng hồ đếm ngược */
-      .countdown-container {
-        margin-bottom: 2.5rem;
-      }
-
-      .countdown-title {
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #aaa;
-        margin-bottom: 10px;
-      }
-
-      .timer {
-        display: flex;
-        gap: 15px;
-        justify-content: center;
-      }
-
-      .time-box {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        padding: 10px 15px;
-        border-radius: 8px;
-        min-width: 70px;
-      }
-
-      .time-box span {
-        display: block;
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: var(--white);
-      }
-
-      .time-box label {
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        color: #888;
-      }
-
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 1.5rem;
-        }
-        .hero .new-price {
-          font-size: 2rem;
         }
       }
 
@@ -838,12 +573,6 @@
         margin-bottom: 2px;
       }
 
-      /* Tích xanh chính chủ */
-      .fb-user-name .v-badge {
-        color: #1877f2;
-        font-size: 0.8rem;
-      }
-
       .fb-comment-text {
         color: #e4e6eb;
         font-size: 0.9rem;
@@ -851,125 +580,140 @@
         word-break: break-word;
       }
 
-      /* Khối hiển thị số Like ở góc bong bóng */
-      .fb-like-count-badge {
-        position: absolute;
-        bottom: -10px;
-        right: 10px;
-        background: #242526;
-        border: 1px solid #3a3b3c;
-        padding: 2px 6px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        font-size: 0.75rem;
-        color: #b0b3b8;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      html { scroll-padding-top: 84px; }
+      section[id] { scroll-margin-top: 0; }
+      a, button { -webkit-tap-highlight-color: transparent; }
+      a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+        outline: 3px solid #ffcc66; outline-offset: 4px;
       }
-
-      .fb-like-count-badge .like-icons {
-        color: #1877f2;
+      .skip-link { position: fixed; top: -100px; left: 16px; padding: 12px 18px; background: #fff; color: #111; z-index: 2000; }
+      .skip-link:focus { top: 12px; }
+      header { top: 0; gap: 12px; }
+      header nav a { display: inline-flex; min-height: 44px; align-items: center; white-space: nowrap; }
+      .btn-buy { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; }
+      .section-title span, .logo span, .product-summary h3, .specs-table td.value strong { color: var(--accent-text); }
+      .section-title { font-size: clamp(1.6rem, 3vw, 2.5rem); }
+      .product-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .product-card img { height: auto; aspect-ratio: 1; object-fit: contain; }
+      .product-card a { display: block; }
+      .product-info { padding: 18px 12px; }
+      .product-info h3 { font-size: 1rem; }
+      .section-note { color: #b5b5b5; text-align: center; margin: -12px 0 24px; }
+      .order-wrapper { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 40px; }
+      .product-summary, .order-form, .specs-table-box { min-width: 0; max-width: none; }
+      .product-summary { padding: 24px 0; }
+      .order-form { width: 100%; padding: 28px; }
+      .features, .specs-section, .warranty-section, #order-section, .fb-comments-section { padding: 64px 0; }
+      #gallery { padding-block: 64px; }
+      .features > .container, #order-section > .container { margin-block: 0; }
+      .ui-icon { display: inline-block; flex-shrink: 0; vertical-align: middle; }
+      .warranty-icon .ui-icon { width: 32px; height: 32px; }
+      .benefit-list .ui-icon, .btn-submit .ui-icon { width: 18px; height: 18px; }
+      .price-box, .price-tag, .order-totals { font-variant-numeric: tabular-nums; }
+      .field-error:empty { margin-top: 0; }
+      .price-tag { margin: 12px 0 22px; }
+      .benefit-list li { align-items: flex-start; }
+      .benefit-list .ui-icon { margin-top: 5px; }
+      .form-intro, .form-note { color: #b5b5b5; font-size: .88rem; margin-bottom: 20px; }
+      .form-note { margin: 16px 0 0; }
+      .form-group input::placeholder, .form-group textarea::placeholder { color: #aaa; opacity: 1; }
+      .form-group textarea { resize: vertical; min-height: 100px; }
+      .field-error { color: #ff9aa3; font-size: .85rem; margin-top: 6px; }
+      [aria-invalid="true"] { border-color: #ff9aa3 !important; }
+      .order-totals { background: #111; border: 1px solid #3a3a3a; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+      .order-totals div { display: flex; justify-content: space-between; gap: 16px; margin: 4px 0; }
+      .order-totals dd { text-align: right; }
+      .order-totals .total-row { border-top: 1px solid #444; padding-top: 12px; margin-top: 12px; font-weight: 700; font-size: 1.15rem; }
+      .order-status:not(:empty) { padding: 14px; border: 1px solid #777; border-radius: 6px; margin-top: 16px; }
+      .order-status[data-state="success"] { color: #a1efbc; border-color: #48815a; }
+      .order-status[data-state="error"], .order-status[data-state="uncertain"] { color: #ffd09a; border-color: #997347; }
+      .btn-submit:disabled { opacity: .7; cursor: not-allowed; transform: none; }
+      .specs-table th { padding: 14px 10px; font-size: .95rem; text-align: left; width: 40%; color: #b5b5b5; }
+      .warranty-card p { color: #b5b5b5; }
+      .fb-header { font-size: 1.5rem; }
+      .fb-comment-body { min-width: 0; }
+      .fb-comment-bubble { display: block; padding: 16px; border-radius: 10px; background: #252525; }
+      .fb-user-name .v-badge { width: 15px; height: 15px; color: #71adff; }
+      .fb-like-count-badge { display: flex; align-items: center; gap: 6px; width: fit-content; margin: 12px 0 0 auto; padding: 3px 9px; border: 1px solid #555; border-radius: 20px; background: #18191a; font-size: .8rem; color: #e4e6eb; }
+      .fb-like-count-badge .ui-icon { width: 14px; height: 14px; color: #71adff; }
+      .fb-comment-actions { display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 6px 12px 0; color: #b5b5b5; font-size: .78rem; }
+      .fb-action-btn { font-weight: 600; }
+      .fb-action-btn.liked { color: #71adff; }
+      #fake-order-popup { position: fixed; top: 88px; left: 16px; width: min(320px, calc(100vw - 32px)); display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 1px solid #555; border-left: 4px solid var(--primary-red); border-radius: 10px; background: #fff; color: #222; box-shadow: 0 8px 24px #0005; z-index: 900; pointer-events: none; visibility: hidden; opacity: 0; transform: translateY(-8px); transition: opacity .2s ease, transform .2s ease; }
+      #fake-order-popup.show { visibility: visible; opacity: 1; transform: none; }
+      .order-icon { display: grid; place-items: center; width: 34px; height: 34px; flex-shrink: 0; border-radius: 50%; background: var(--primary-red); color: #fff; }
+      .order-info { font-size: .8rem; line-height: 1.45; overflow-wrap: anywhere; }
+      .order-info strong { color: #b3020b; }
+      .order-time { display: block; margin-top: 3px; color: #666; font-size: .72rem; }
+      @media (max-width: 900px) {
+        .hero { gap: 24px; }
+        .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .order-wrapper { gap: 24px; }
       }
-
-      /* Các nút tương tác bên dưới bình luận: Thích, Phản hồi, Thời gian */
-      .fb-comment-actions {
-        padding-left: 12px;
-        margin-top: 4px;
-        font-size: 0.75rem;
-        color: #b0b3b8;
-        display: flex;
-        gap: 12px;
-        align-items: center;
+      @media (max-width: 768px) {
+        .hero { grid-template-columns: 1fr; padding-top: 110px; padding-bottom: 32px; }
+        .hero h1 { font-size: 2.2rem; }
+        .hero-copy { width: 100%; max-width: 560px; margin-inline: auto; text-align: left; }
+        .hero-image { order: -1; max-width: 360px; margin: 0 auto; }
+        .order-wrapper { grid-template-columns: 1fr; }
+        .product-summary { padding: 0; }
+        .order-form { padding: 24px; }
+        .specs-section, .warranty-section, .features, #order-section, .fb-comments-section { padding: 48px 0; }
+        #gallery { padding-block: 48px; }
       }
-
-      .fb-action-btn {
-        color: #b0b3b8;
-        text-decoration: none;
-        font-weight: bold;
-        cursor: pointer;
+      @media (max-width: 480px) {
+        header { padding: 12px 16px; }
+        .logo { font-size: .95rem; }
+        .hero { padding: 98px 16px 28px; gap: 20px; }
+        .hero h1 { font-size: 2rem; margin: 12px 0; }
+        .hero-image { max-width: 260px; }
+        .hero .price-box { margin: 16px 0 6px; }
+        .hero-actions { margin: 18px 0 12px; }
+        .hero-actions .btn-buy, .hero-actions .btn-secondary { flex: 1; padding: 12px 16px; text-align: center; }
+        .container, .specs-container, .warranty-container, .fb-container { padding: 0 16px; }
+        .product-grid { grid-template-columns: minmax(0, 1fr); }
+        .order-form { padding: 20px 16px; }
+        .specs-table th { width: 36%; }
+        .specs-table td, .specs-table th { padding: 12px 6px; font-size: .88rem; }
+        .btn-submit { font-size: .98rem; }
       }
-
-      .fb-action-btn:hover {
-        text-decoration: underline;
-      }
-
-      .fb-action-btn.liked {
-        color: #1877f2;
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
       }
     </style>
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Bỏ qua đến nội dung chính</a>
     <header>
       <div class="logo">G-SHOCK <span>MAN UTD</span></div>
-      <nav>
-        <a href="#order-section" class="btn-buy" style="padding: 0.5rem 1rem"
+      <nav aria-label="Đặt hàng">
+        <a href="#order-heading" class="btn-buy" style="padding: 0.5rem 1rem"
           >Mua Ngay</a
         >
       </nav>
     </header>
 
-    <div id="fake-order-popup">
-      <div class="order-icon">
-        <i class="fas fa-shopping-cart"></i>
-      </div>
-      <div class="order-info">
-        <span id="order-text"></span>
-        <span class="order-time">Vừa xong</span>
-      </div>
+    <div id="fake-order-popup" role="status" aria-live="polite" aria-atomic="true" aria-hidden="true">
+      <div class="order-icon"><svg class="ui-icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h3l3 12h11l3-9H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg></div>
+      <div class="order-info"><span id="order-text"></span><span class="order-time">Vừa xong</span></div>
     </div>
 
-    <section class="hero">
-      <div class="promo-badge">
-        <i class="fas fa-fire"></i> GIẢM GIÁ LỚN 60% - Tặng kèm dây đeo kim loại
-        cao cấp
-      </div>
-
-      <h1>
-        G-SHOCK x MANCHESTER UNITED<br /><span
-          >PHIÊN BẢN GIỚI HẠN <br />
-          ĐỘC QUYỀN</span
-        >
-      </h1>
-
-      <!-- <p
-        style="font-size: 1.2rem; max-width: 700px; color: #ddd; margin: 0 auto"
-      >
-        Cơ hội duy nhất sở hữu siêu phẩm GA-2100 Custom mang linh hồn Quỷ Đỏ với
-        mức giá không tưởng.
-      </p> -->
-
-      <div class="price-box">
-        <span class="old-price">2.222.000đ</span>
-        <span class="new-price">889.000đ</span>
-      </div>
-
-      <div class="countdown-container">
-        <div class="countdown-title">Ưu đãi kết thúc sau:</div>
-        <div class="timer">
-          <div class="time-box">
-            <span id="hours">02</span>
-            <label>Giờ</label>
-          </div>
-          <div class="time-box">
-            <span id="minutes">45</span>
-            <label>Phút</label>
-          </div>
-          <div class="time-box">
-            <span id="seconds">30</span>
-            <label>Giây</label>
-          </div>
+    <main id="main-content" tabindex="-1">
+    <section class="hero" aria-labelledby="product-title">
+      <div class="hero-copy">
+        <div class="eyebrow">G-Shock x Manchester United</div>
+        <h1 id="product-title">Dấu ấn Quỷ Đỏ.<span>Trên cổ tay bạn.</span></h1>
+        <p>Đồng hồ GA-2100 phiên bản phong cách Manchester United, với mặt đỏ và hai lựa chọn dây đeo.</p>
+        <div class="price-box"><span class="new-price">889.000đ</span><span class="price-unit">/ chiếc</span></div>
+        <p>Tặng kèm dây kim loại · Miễn phí vận chuyển</p>
+        <div class="hero-actions">
+          <a href="#order-heading" class="btn-buy">Đặt hàng</a>
+          <a href="#gallery" class="btn-secondary">Xem ảnh</a>
         </div>
+        <p class="hero-note">Xem hàng trước, trả tiền sau · Bảo hành 5 năm</p>
       </div>
-
-      <a
-        href="#order-section"
-        class="btn-buy"
-        style="font-size: 1.2rem; padding: 1.2rem 3rem"
-      >
-        <i class="fas fa-bolt"></i> Nhận Ưu Đãi Ngay
-      </a>
+      <img class="hero-image" src="./mattruoc.jpg" width="1254" height="1254" fetchpriority="high" alt="Đồng hồ GA-2100  mặt đỏ Manchester United trong hộp" />
     </section>
 
     <section class="container" id="gallery">
@@ -978,31 +722,31 @@
       <div class="product-grid">
         <!-- Ảnh 1 -->
         <div class="product-card">
-          <img src="./đayo.jpg" alt="G-Shock MU trên tay" />
+          <a href="./đayo.jpg" target="_blank" rel="noopener" aria-label="Xem ảnh cận cảnh mặt đồng hồ với dây đỏ (tab mới)"><img src="./đayo.jpg" alt="Cận cảnh mặt đồng hồ với dây đỏ" loading="lazy" decoding="async" width="2560" height="2560" /></a>
           <div class="product-info">
-            <h3>Thiết kế Core Guard Chắc Chắn</h3>
+            <h3>Cận cảnh mặt đồng hồ · Dây đỏ</h3>
           </div>
         </div>
         <!-- Ảnh 2 -->
         <div class="product-card">
-          <img src="./day-thep.jpg" alt="Fullbox G-Shock MU" />
+          <a href="./day-thep.jpg" target="_blank" rel="noopener" aria-label="Xem ảnh đồng hồ mặt đỏ với dây kim loại (tab mới)"><img src="./day-thep.jpg" alt="Đồng hồ mặt đỏ với dây kim loại" loading="lazy" decoding="async" width="2560" height="2560" /></a>
           <div class="product-info">
-            <h3>Lịch lãm - Sang Trọng</h3>
+            <h3>Đồng hồ với dây kim loại</h3>
           </div>
         </div>
         <!-- Ảnh 3 -->
         <div class="product-card">
-          <img src="./matsau.jpg" alt="Cận cảnh mặt đồng hồ" />
+          <a href="./matsau.jpg" target="_blank" rel="noopener" aria-label="Xem ảnh mặt lưng đồng hồ ga-2100 (tab mới)"><img src="./matsau.jpg" alt="Mặt lưng đồng hồ GA-2100" loading="lazy" decoding="async" width="1254" height="1254" /></a>
           <div class="product-info">
-            <h3>Thể thao - Cá tính</h3>
+            <h3>Mặt lưng và chi tiết hoàn thiện</h3>
           </div>
         </div>
 
         <!-- Ảnh 4 -->
         <div class="product-card">
-          <img src="./2-dh.jpg" alt="Mặt lưng đồng hồ" />
+          <a href="./2-dh.jpg" target="_blank" rel="noopener" aria-label="Xem ảnh hai đồng hồ dây đỏ và dây kim loại cùng hộp và thẻ (tab mới)"><img src="./2-dh.jpg" alt="Hai đồng hồ dây đỏ và dây kim loại cùng hộp và thẻ" loading="lazy" decoding="async" width="2560" height="2560" /></a>
           <div class="product-info">
-            <h3>Miễn phí đổi trả 1 tháng nếu có lỗi của nhà sản xuất</h3>
+            <h3>Bộ đồng hồ, hộp và thẻ</h3>
           </div>
         </div>
       </div>
@@ -1012,22 +756,22 @@
       <div class="container">
         <div class="feature-list">
           <div class="feature-item">
-            <i class="fas fa-shield-alt"></i>
+            <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 4 4 7 8 9 4-2 8-5 8-9V6l-8-3Z"/><path d="m8 12 3 3 5-6"/></svg>
             <h3>Chống Va Đập</h3>
             <p>Cấu trúc bảo vệ lõi siêu bền bỉ.</p>
           </div>
           <div class="feature-item">
-            <i class="fas fa-tint"></i>
+            <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3C9 7 5 11 5 15a7 7 0 0 0 14 0c0-4-4-8-7-12Z"/><path d="M8 15a4 4 0 0 0 4 4"/></svg>
             <h3>Chống Nước 20Bar</h3>
             <p>Thoải mái bơi lội và hoạt động dưới nước.</p>
           </div>
           <div class="feature-item">
-            <i class="fas fa-medal"></i>
-            <h3>Bản Giới Hạn</h3>
+            <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="9" r="6"/><path d="m8 14-2 7 6-3 6 3-2-7"/><path d="m10 9 1.5 1.5L14 7"/></svg>
+            <h3>Phong Cách </h3>
             <p>Dành riêng cho những người hâm mộ Quỷ Đỏ.</p>
           </div>
           <div class="feature-item">
-            <i class="fa fa-credit-card"></i>
+            <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg>
             <h3>Đầy Đủ Sổ Thẻ Bảo Hành</h3>
             <!-- <p>Dành riêng cho những người hâm mộ Quỷ Đỏ.</p> -->
           </div>
@@ -1041,74 +785,74 @@
 
         <div class="specs-wrapper">
           <div class="specs-table-box">
-            <table class="specs-table">
+            <table class="specs-table" aria-label="Thông số đồng hồ GA-2100 ">
               <tr>
-                <td class="label">Dòng máy</td>
+                <th scope="row">Dòng máy</th>
                 <td class="value">
-                  G-Shock GA-2100 Series (Bản độ Custom cao cấp)
+                  G-Shock GA-2100 Series
                 </td>
               </tr>
               <tr>
-                <td class="label">Phiên bản</td>
+                <th scope="row">Phiên bản</th>
                 <td class="value">
-                  <strong>Manchester United Limited Edition</strong>
+                  <strong>Manchester United </strong>
                 </td>
               </tr>
               <tr>
-                <td class="label">Chất liệu vỏ / khung</td>
+                <th scope="row">Chất liệu vỏ / khung</th>
                 <td class="value">
                   Cấu trúc bảo vệ lõi carbon (Carbon Core Guard) siêu nhẹ, siêu
                   bền
                 </td>
               </tr>
               <tr>
-                <td class="label">Chất liệu dây</td>
+                <th scope="row">Chất liệu dây</th>
                 <td class="value">
                   Dây Resin nhám bền bỉ +
                   <em>Tặng kèm bộ dây kim loại cao cấp</em>
                 </td>
               </tr>
               <tr>
-                <td class="label">Mặt kính</td>
+                <th scope="row">Mặt kính</th>
                 <td class="value">
                   Kính khoáng (Mineral Glass) cường lực chống trầy xước tốt
                 </td>
               </tr>
               <tr>
-                <td class="label">Size mặt</td>
+                <th scope="row">Size mặt</th>
                 <td class="value">
                   42 -44mm ( tương đương với 41mm ở đồng hồ thường. phù hợp size
                   tay từ 16cm trở lên )
                 </td>
               </tr>
               <tr>
-                <td class="label">Chống nước</td>
+                <th scope="row">Chống nước</th>
                 <td class="value">
                   <strong>200 mét (20 Bar)</strong> - Thoải mái đi mưa, rửa tay,
                   bơi lội
                 </td>
               </tr>
               <tr>
-                <td class="label">Bộ máy</td>
+                <th scope="row">Bộ máy</th>
                 <td class="value">
                   Quartz (Pin) chuẩn Nhật Bản - Độ chính xác ±15 giây một tháng
                 </td>
               </tr>
               <tr>
-                <td class="label">Tính năng cốt lõi</td>
+                <th scope="row">Tính năng cốt lõi</th>
                 <td class="value">
                   Đèn LED cực sáng, Giờ thế giới (31 múi giờ), Đồng hồ bấm giờ
                   1/100 giây, 5 chế độ báo thức, Lịch tự động hoàn toàn
                 </td>
               </tr>
               <tr>
-                <td class="label">Kích thước vỏ</td>
+                <th scope="row">Kích thước vỏ</th>
                 <td class="value">
                   48.5 × 45.4 × 11.8 mm (Độ dày lý tưởng, ôm gọn cổ tay)
                 </td>
               </tr>
               <tr>
-                <td class="label">Trọng lượng</td>
+                <th scope="row">Trọng lượng</th>
                 <td class="value">
                   Chỉ 51g (Cảm giác đeo vô cùng nhẹ nhàng, thoải mái)
                 </td>
@@ -1128,7 +872,7 @@
         <div class="warranty-grid">
           <div class="warranty-card">
             <div class="warranty-icon">
-              <i class="fas fa-shield-alt"></i>
+              <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 4 4 7 8 9 4-2 8-5 8-9V6l-8-3Z"/><path d="m8 12 3 3 5-6"/></svg>
             </div>
             <h3>Bảo Hành 5 Năm</h3>
             <p>
@@ -1139,18 +883,18 @@
 
           <div class="warranty-card">
             <div class="warranty-icon">
-              <i class="fas fa-sync-alt"></i>
+              <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 8a8 8 0 0 0-14-3L3 8m0-5v5h5M4 16a8 8 0 0 0 14 3l3-3m0 5v-5h-5"/></svg>
             </div>
             <h3>1 Đổi 1 Trong 30 Ngày</h3>
             <p>
               Nếu sản phẩm xuất hiện bất kỳ lỗi nào từ nhà sản xuất hoặc lỗi
-              hoàn thiện custom, bên em hỗ trợ đổi mới 100% miễn phí tận nhà.
+              hoàn thiện , bên em hỗ trợ đổi mới 100% miễn phí tận nhà.
             </p>
           </div>
 
           <div class="warranty-card">
             <div class="warranty-icon">
-              <i class="fas fa-eye"></i>
+              <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
             </div>
             <h3>Xem Hàng Trước - Trả Tiền Sau</h3>
             <p>
@@ -1164,52 +908,45 @@
 
     <section id="order-section">
       <div class="container">
-        <h2 class="section-title">Đặt Hàng <span>Ngay</span></h2>
+        <h2 class="section-title" id="order-heading">Đặt Hàng <span>Ngay</span></h2>
 
         <div class="order-wrapper">
           <div class="product-summary">
-            <!-- <h3>G-Shock x Manchester United</h3> -->
+            <h3>G-Shock phiên bản <br />Manchester United</h3>
+            <p class="price-tag">889.000đ <small>/ chiếc</small></p>
 
             <ul class="benefit-list">
               <li>
-                <i class="fas fa-check-circle"></i> Miễn phí vận chuyển toàn
+                <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg> Miễn phí vận chuyển toàn
                 quốc
               </li>
               <li>
-                <i class="fas fa-check-circle"></i> Tặng kèm hộp đựng dụng cụ
+                <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg> Tặng kèm hộp đựng dụng cụ
                 thay dây
               </li>
               <li>
-                <i class="fas fa-check-circle"></i> Tặng kèm dây đeo thông minh
+                <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg> Tặng kèm dây đeo thông minh
                 thép không gỉ cao cấp
               </li>
             </ul>
-            <!-- <div style="margin-top: 30px; border-radius: 10px; overflow: hidden;">
-                        <img src="./cohopgan.jpg" alt="Đồng hồ MU" style="width: 100%;">
-                    </div> -->
           </div>
-          <p class="price-tag">
-            889.000đ
-            <span
-              style="
-                font-size: 1rem;
-                color: #888;
-                text-decoration: line-through;
-              "
-              >2.500.000đ</span
-            >
-          </p>
           <div class="order-form">
-            <form id="purchaseForm">
+            <form id="purchaseForm" method="post">
+              <noscript><p class="form-intro">Vui lòng bật JavaScript trong trình duyệt để kiểm tra tổng tiền và gửi đơn hàng.</p></noscript>
+              <p class="form-intro">Điền thông tin nhận hàng. Các mục có dấu * là bắt buộc.</p>
               <div class="form-group">
                 <label for="fullname">Họ và tên *</label>
                 <input
                   type="text"
                   id="fullname"
                   name="fullname"
+                  autocomplete="name"
+                  maxlength="100"
+                  aria-describedby="fullname-error"
                   placeholder="Nhập tên của bạn"
                   required
                 />
+                <p class="field-error" id="fullname-error"></p>
               </div>
 
               <div class="form-group">
@@ -1218,9 +955,14 @@
                   type="tel"
                   id="phone"
                   name="phone"
-                  placeholder="Ví dụ: 0912345xxx"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  maxlength="20"
+                  aria-describedby="phone-error"
+                  placeholder="Ví dụ: 0912345678"
                   required
                 />
+                <p class="field-error" id="phone-error"></p>
               </div>
 
               <div class="form-group">
@@ -1228,10 +970,14 @@
                 <textarea
                   id="address"
                   name="address"
+                  autocomplete="street-address"
+                  maxlength="500"
+                  aria-describedby="address-error"
                   rows="3"
                   placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố"
                   required
                 ></textarea>
+                <p class="field-error" id="address-error"></p>
               </div>
 
               <div class="form-group">
@@ -1243,20 +989,18 @@
                 </select>
               </div>
 
-              <button type="submit" class="btn-submit">
-                <i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG
+              <dl class="order-totals" aria-live="polite" aria-atomic="true">
+                <div><dt>Tiền hàng</dt><dd id="subtotal">889.000đ</dd></div>
+                <div><dt id="discount-label">Giảm theo số lượng</dt><dd id="discount">0đ</dd></div>
+                <div><dt>Vận chuyển</dt><dd>Miễn phí</dd></div>
+                <div class="total-row"><dt>Tổng thanh toán</dt><dd id="order-total">889.000đ</dd></div>
+              </dl>
+              <button type="submit" class="btn-submit" disabled>
+                <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h3l3 12h11l3-9H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg> XÁC NHẬN ĐẶT HÀNG
               </button>
+              <p id="order-status" class="order-status" role="status" aria-live="polite" tabindex="-1"></p>
             </form>
-            <p
-              style="
-                font-size: 0.8rem;
-                color: #888;
-                margin-top: 15px;
-                text-align: center;
-              "
-            >
-              * Thông tin của bạn được bảo mật tuyệt đối.
-            </p>
+            <p class="form-note">Thanh toán khi nhận hàng. Thông tin trên được dùng để xử lý đơn và liên hệ giao hàng.</p>
           </div>
         </div>
       </div>
@@ -1264,222 +1008,233 @@
 
     <section class="fb-comments-section">
       <div class="fb-container">
-        <div class="fb-header">Ý kiến phản hồi từ khách hàng từ facebook</div>
+        <h2 class="fb-header">Phản hồi khách hàng</h2>
 
         <div class="fb-comment-item">
-          <img class="fb-avatar" src="./nam-1.jpg" alt="Avatar" />
+          <img class="fb-avatar" src="./nam-1.jpg" alt="" loading="lazy" width="40" height="40" />
           <div class="fb-comment-body">
             <div class="fb-comment-bubble">
-              <a href="#" class="fb-user-name"
-                >Trần Quốc Hoàng <i class="fas fa-check-circle v-badge"></i
-              ></a>
+              <span class="fb-user-name">Trần Quốc Hoàng <svg class="ui-icon v-badge" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></span>
               <p class="fb-comment-text">
                 Hàng nhận được cực kỳ nét nha ae, đúng phôi GA-2100 đập hộp.
                 Đóng gói cẩn thận, mở ra cái logo MU đỏ rực nhìn phê thực sự.
                 Được tặng thêm bộ dây kim loại lắp vào nhìn như Hublot sang
                 chảnh hẳn!
               </p>
-
-              <div class="fb-like-count-badge">
-                <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
-                <span>42</span>
-              </div>
+              <div class="fb-like-count-badge"><svg class="ui-icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 10v11H3V10h4Zm0 0 5-8c2 0 3 2 2 5l-1 3h6a2 2 0 0 1 2 2l-2 7a3 3 0 0 1-3 2H7"/></svg><span>42</span></div>
             </div>
-            <div class="fb-comment-actions">
-              <span class="fb-action-btn liked">Đã thích</span>
-              <span class="fb-action-btn">Phản hồi</span>
-              <span>1 giờ trước</span>
-            </div>
+            <div class="fb-comment-actions"><span class="fb-action-btn liked">Đã thích</span><span class="fb-action-btn">Phản hồi</span><span>1 giờ trước</span></div>
           </div>
         </div>
 
         <div class="fb-comment-item">
-          <img class="fb-avatar" src="./nam-2.jpg" alt="Avatar" />
+          <img class="fb-avatar" src="./nam-2.jpg" alt="" loading="lazy" width="40" height="40" />
           <div class="fb-comment-body">
             <div class="fb-comment-bubble">
-              <a href="#" class="fb-user-name">Nguyễn Tuấn Minh</a>
+              <span class="fb-user-name">Nguyễn Tuấn Minh</span>
               <p class="fb-comment-text">
                 Ship siêu nhanh luôn shop ơi, đặt hôm qua mà trưa nay shipper đã
                 gọi giao ở HN rồi. Cho mở hộp kiểm tra đúng mẫu mới trả tiền nên
                 rất uy tín. Fan Quỷ đỏ là phải săn ngay em này nhé mng.
               </p>
-
-              <div class="fb-like-count-badge">
-                <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
-                <span>18</span>
-              </div>
+              <div class="fb-like-count-badge"><svg class="ui-icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 10v11H3V10h4Zm0 0 5-8c2 0 3 2 2 5l-1 3h6a2 2 0 0 1 2 2l-2 7a3 3 0 0 1-3 2H7"/></svg><span>18</span></div>
             </div>
-            <div class="fb-comment-actions">
-              <span class="fb-action-btn">Thích</span>
-              <span class="fb-action-btn">Phản hồi</span>
-              <span>3 giờ trước</span>
-            </div>
+            <div class="fb-comment-actions"><span class="fb-action-btn">Thích</span><span class="fb-action-btn">Phản hồi</span><span>3 giờ trước</span></div>
           </div>
         </div>
 
         <div class="fb-comment-item">
-          <img class="fb-avatar" src="./nu-1.jpg" alt="Avatar" />
+          <img class="fb-avatar" src="./nu-1.jpg" alt="" loading="lazy" width="40" height="40" />
           <div class="fb-comment-body">
             <div class="fb-comment-bubble">
-              <a href="#" class="fb-user-name">Lê Thùy Linh</a>
+              <span class="fb-user-name">Lê Thùy Linh</span>
               <p class="fb-comment-text">
                 Mua tặng sinh nhật người yêu mà ổng mê tít, suốt ngày đeo chụp
                 ảnh khoe bạn bè 😂 Thấy shop bảo hành tận 5 năm với thay pin
                 trọn đời nên cũng yên tâm hẳn.
               </p>
-
-              <div class="fb-like-count-badge">
-                <span class="like-icons"><i class="fas fa-thumbs-up"></i></span>
-                <span>9</span>
-              </div>
+              <div class="fb-like-count-badge"><svg class="ui-icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 10v11H3V10h4Zm0 0 5-8c2 0 3 2 2 5l-1 3h6a2 2 0 0 1 2 2l-2 7a3 3 0 0 1-3 2H7"/></svg><span>9</span></div>
             </div>
-            <div class="fb-comment-actions">
-              <span class="fb-action-btn">Thích</span>
-              <span class="fb-action-btn">Phản hồi</span>
-              <span>5 giờ trước</span>
-            </div>
+            <div class="fb-comment-actions"><span class="fb-action-btn">Thích</span><span class="fb-action-btn">Phản hồi</span><span>5 giờ trước</span></div>
           </div>
         </div>
       </div>
     </section>
 
+    </main>
     <script>
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbyb__HY_n8brMccLuprhjwnLkzZV57SIinZvdJuBelya4fgYgt7_cL014KXYpQEm6NV/exec";
       const form = document.getElementById("purchaseForm");
-      const btnSubmit = form.querySelector(".btn-submit");
-
-      form.addEventListener("submit", (e) => {
-        fbq("track", "InitiateCheckout");
-        e.preventDefault();
-
-        // Hiệu ứng đang gửi
-        btnSubmit.disabled = true;
-        btnSubmit.innerHTML =
-          '<i class="fas fa-spinner fa-spin"></i> ĐANG GỬI...';
-
-        // Gửi dữ liệu bằng Fetch API
-        fetch(scriptURL, {
-          method: "POST",
-          body: new FormData(form),
-        })
-          .then((response) => {
-            alert(
-              "Chúc mừng! Đơn hàng của bạn đã được lưu thành công vào hệ thống. Chúng tôi sẽ sớm liên hệ!",
-            );
-            btnSubmit.disabled = false;
-            btnSubmit.innerHTML =
-              '<i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG';
-            fbq("track", "Purchase", {
-              value: 889000,
-              currency: "VND",
-            });
-            form.reset();
-          })
-          .catch((error) => {
-            console.error("Lỗi!", error.message);
-            alert("Có lỗi xảy ra. Vui lòng thử lại hoặc gọi hotline!");
-            btnSubmit.disabled = false;
-            btnSubmit.innerHTML =
-              '<i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG';
+      if (form) {
+        const btnSubmit = form.querySelector(".btn-submit");
+        const quantity = form.elements.quantity;
+        const status = document.getElementById("order-status");
+        const originalButton = btnSubmit.innerHTML;
+        const money = (value) => new Intl.NumberFormat("vi-VN").format(value) + "đ";
+        let submitting = false;
+        const totals = () => {
+          const count = Number(quantity.value);
+          const rate = count === 3 ? .1 : count === 2 ? .05 : 0;
+          const subtotal = 889000 * count;
+          const discount = Math.round(subtotal * rate);
+          return { count, rate, subtotal, discount, total: subtotal - discount };
+        };
+        const updateTotal = () => {
+          const value = totals();
+          document.getElementById("subtotal").textContent = money(value.subtotal);
+          document.getElementById("discount-label").textContent = value.rate ? `Giảm ${value.rate * 100}% theo số lượng` : "Giảm theo số lượng";
+          document.getElementById("discount").textContent = value.discount ? "−" + money(value.discount) : money(0);
+          document.getElementById("order-total").textContent = money(value.total);
+        };
+        const track = (...args) => {
+          try { if (typeof window.fbq === "function") window.fbq(...args); } catch { /* Analytics must not interrupt checkout. */ }
+        };
+        const showStatus = (message, state) => {
+          status.textContent = message;
+          status.dataset.state = state;
+        };
+        const fields = ["fullname", "phone", "address"];
+        fields.forEach((name) => form.elements[name].addEventListener("input", () => {
+          form.elements[name].removeAttribute("aria-invalid");
+          document.getElementById(name + "-error").textContent = "";
+        }));
+        quantity.addEventListener("change", updateTotal);
+        form.addEventListener("reset", () => setTimeout(updateTotal, 0));
+        updateTotal();
+        // Native validation remains available when JavaScript is unavailable.
+        form.noValidate = true;
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          if (submitting) return;
+          let firstInvalid = null;
+          fields.forEach((name) => {
+            const input = form.elements[name];
+            input.value = input.value.trim();
+            const normalizedPhone = input.value.replace(/[\s.()-]/g, "");
+            let message = !input.value ? "Vui lòng điền thông tin này." : "";
+            if (name === "phone" && input.value && !/^(?:0|\+84)(?:[35789]\d{8}|2\d{9})$/.test(normalizedPhone)) {
+              message = "Nhập số điện thoại Việt Nam hợp lệ, bắt đầu bằng 0 hoặc +84.";
+            }
+            if (input.value.length > input.maxLength && input.maxLength > 0) message = "Thông tin quá dài, vui lòng rút gọn.";
+            document.getElementById(name + "-error").textContent = message;
+            input.setAttribute("aria-invalid", String(Boolean(message)));
+            if (message && !firstInvalid) firstInvalid = input;
           });
-      });
-
-      const customers = [
-        { name: "Nguyễn Văn Hùng", city: "Hà Nội" },
-        { name: "Trần Thế Anh", city: "TP. Hồ Chí Minh" },
-        { name: "Lê Minh Tâm", city: "Đà Nẵng" },
-        { name: "Phạm Hoàng Long", city: "Hải Phòng" },
-        { name: "Vũ Đức Trọng", city: "Bình Dương" },
-        { name: "Đặng Thu Thảo", city: "Cần Thơ" },
-        { name: "Ngô Quốc Bảo", city: "Đồng Nai" },
-        { name: "Hoàng Anh Tuấn", city: "Huế" },
-        { name: "Bùi Tuyết Mai", city: "Quảng Ninh" },
-      ];
-
-      const popup = document.getElementById("fake-order-popup");
-      const orderText = document.getElementById("order-text");
-
-      function showOrder() {
-        // Chọn ngẫu nhiên khách hàng
-        const randomCust =
-          customers[Math.floor(Math.random() * customers.length)];
-
-        // Cập nhật nội dung
-        orderText.innerHTML = `<strong>${randomCust.name}</strong> (${randomCust.city}) vừa đặt mua thành công </strong>`;
-
-        // Hiển thị popup
-        popup.classList.add("show");
-
-        // Sau 5 giây thì ẩn đi
-        setTimeout(() => {
-          popup.classList.remove("show");
-        }, 5000);
+          if (firstInvalid) {
+            showStatus("Vui lòng kiểm tra các mục được đánh dấu.", "error");
+            firstInvalid.focus();
+            return;
+          }
+          if (!["1", "2", "3"].includes(quantity.value)) return;
+          const snapshot = totals();
+          const payload = new FormData(form);
+          const controls = Array.from(form.querySelectorAll("input, textarea, select, button"));
+          submitting = true;
+          form.setAttribute("aria-busy", "true");
+          controls.forEach((control) => { control.disabled = true; });
+          btnSubmit.textContent = "ĐANG GỬI…";
+          showStatus("Đang gửi đơn hàng. Vui lòng đợi xác nhận.", "pending");
+          track("track", "InitiateCheckout");
+          const controller = new AbortController();
+          const timeout = setTimeout(() => controller.abort(), 15000);
+          let state = "uncertain";
+          try {
+            const response = await fetch(scriptURL, { method: "POST", body: payload, signal: controller.signal });
+            const result = await response.json().catch(() => null);
+            const confirmed = response.ok && result && (result.result === "success" || result.success === true) && result.success !== false && !result.error && result.result !== "error";
+            if (confirmed) {
+              state = "success";
+              showStatus(`Đã ghi nhận đơn ${snapshot.count} chiếc, tổng ${money(snapshot.total)}. Cửa hàng sẽ liên hệ xác nhận và giao hàng.`, state);
+              track("track", "Purchase", { value: snapshot.total, currency: "VND" });
+              form.reset();
+              updateTotal();
+            } else if (response.ok && result && (result.success === false || result.result === "error")) {
+              state = "error";
+              showStatus("Hệ thống báo chưa lưu được đơn. Thông tin vẫn được giữ lại; bạn có thể thử gửi lại.", state);
+            } else {
+              showStatus("Chưa xác nhận được đơn đã lưu. Thông tin vẫn được giữ lại. Vui lòng kiểm tra với cửa hàng trước khi gửi lại để tránh trùng đơn.", state);
+            }
+          } catch {
+            showStatus("Kết nối bị gián đoạn hoặc phản hồi quá lâu; chưa xác nhận được đơn đã lưu. Vui lòng kiểm tra với cửa hàng trước khi gửi lại để tránh trùng đơn.", state);
+          } finally {
+            clearTimeout(timeout);
+            submitting = false;
+            form.removeAttribute("aria-busy");
+            controls.forEach((control) => { control.disabled = false; });
+            btnSubmit.innerHTML = state === "uncertain" ? "GỬI LẠI YÊU CẦU" : originalButton;
+            status.focus();
+          }
+        });
+        btnSubmit.disabled = false;
       }
-
-      // Lần đầu tiên xuất hiện sau 3 giây vào trang
-      setTimeout(() => {
-        showOrder();
-
-        // Sau đó cứ mỗi 15-25 giây lại xuất hiện một lần ngẫu nhiên
-        setInterval(
-          () => {
-            showOrder();
-          },
-          Math.floor(Math.random() * (25000 - 15000 + 1) + 15000),
-        );
-      }, 3000);
     </script>
 
     <script>
-      function startCountdown() {
-        // Thiết lập thời gian đếm ngược ban đầu: 2 giờ, 45 phút, 00 giây
-        let hours = 2;
-        let minutes = 45;
-        let seconds = 0;
-
-        // Lấy các thẻ hiển thị ngoài màn hình
-        const hoursElement = document.getElementById("hours");
-        const minutesElement = document.getElementById("minutes");
-        const secondsElement = document.getElementById("seconds");
-
-        // Chạy hàm cập nhật sau mỗi 1 giây (1000ms)
-        const countdownInterval = setInterval(() => {
-          // Trừ đi 1 giây
-          seconds--;
-
-          // Nếu số giây xuống dưới 0
-          if (seconds < 0) {
-            seconds = 59;
-            minutes--; // Trừ đi 1 phút
-
-            // Nếu số phút xuống dưới 0
-            if (minutes < 0) {
-              minutes = 59;
-              hours--; // Trừ đi 1 giờ
-            }
+      (() => {
+        const customers = [
+          { name: "Nguyễn Văn Hùng", city: "Hà Nội" },
+          { name: "Trần Thế Anh", city: "TP. Hồ Chí Minh" },
+          { name: "Lê Minh Tâm", city: "Đà Nẵng" },
+          { name: "Phạm Hoàng Long", city: "Hải Phòng" },
+          { name: "Vũ Đức Trọng", city: "Bình Dương" },
+          { name: "Đặng Thu Thảo", city: "Cần Thơ" },
+          { name: "Ngô Quốc Bảo", city: "Đồng Nai" },
+          { name: "Hoàng Anh Tuấn", city: "Huế" },
+          { name: "Bùi Tuyết Mai", city: "Quảng Ninh" },
+        ];
+        const popup = document.getElementById("fake-order-popup");
+        const text = document.getElementById("order-text");
+        const orderSection = document.getElementById("order-section");
+        if (!popup || !text) return;
+        let hideTimer;
+        let showTimer;
+        const hidePopup = () => {
+          popup.classList.remove("show");
+          popup.setAttribute("aria-hidden", "true");
+          clearTimeout(hideTimer);
+        };
+        const overlaps = (a, b) => a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+        const canShow = () => {
+          if (document.hidden) return false;
+          const header = document.querySelector("header");
+          if (header) popup.style.top = Math.ceil(header.getBoundingClientRect().bottom + 12) + "px";
+          const orderRect = orderSection?.getBoundingClientRect();
+          if (orderRect && orderRect.top < window.innerHeight && orderRect.bottom > 0) return false;
+          if (document.activeElement?.closest("form")) return false;
+          const bounds = popup.getBoundingClientRect();
+          return !Array.from(document.querySelectorAll("a, button, input, select, textarea")).some((control) => overlaps(bounds, control.getBoundingClientRect()));
+        };
+        const showPopup = () => {
+          hidePopup();
+          if (canShow()) {
+            const customer = customers[Math.floor(Math.random() * customers.length)];
+            const name = document.createElement("strong");
+            name.textContent = customer.name;
+            text.replaceChildren(name, document.createTextNode(` (${customer.city}) vừa đặt mua thành công`));
+            popup.setAttribute("aria-hidden", "false");
+            popup.classList.add("show");
+            // Recheck after text wrapping changes the popup's height.
+            if (!canShow()) hidePopup();
+            else hideTimer = setTimeout(hidePopup, 5000);
           }
-
-          // Nếu hết sạch thời gian (về 00:00:00), tự động reset lại để trang không bị lỗi
-          if (hours < 0) {
-            hours = 2;
-            minutes = 45;
-            seconds = 0;
-          }
-
-          // Định dạng hiển thị luôn có 2 chữ số (VD: số 5 thành "05")
-          hoursElement.textContent = hours < 10 ? "0" + hours : hours;
-          minutesElement.textContent = minutes < 10 ? "0" + minutes : minutes;
-          secondsElement.textContent = seconds < 10 ? "0" + seconds : seconds;
-        }, 1000);
-      }
-
-      // Kích hoạt bộ đếm ngược ngay khi trang tải xong
-      window.addEventListener("DOMContentLoaded", startCountdown);
+          showTimer = setTimeout(showPopup, 15000 + Math.floor(Math.random() * 10001));
+        };
+        const protectControls = () => {
+          if (popup.classList.contains("show") && !canShow()) hidePopup();
+        };
+        window.addEventListener("scroll", protectControls, { passive: true });
+        window.addEventListener("resize", protectControls);
+        document.addEventListener("focusin", protectControls);
+        document.addEventListener("visibilitychange", () => { if (document.hidden) hidePopup(); });
+        window.addEventListener("pagehide", () => { clearTimeout(showTimer); hidePopup(); });
+        window.addEventListener("pageshow", (event) => { if (event.persisted) showTimer = setTimeout(showPopup, 3000); });
+        showTimer = setTimeout(showPopup, 3000);
+      })();
     </script>
 
     <footer>
-      <p>&copy; 2026 Watch Store - G-Shock Custom Collection</p>
+      <p>&copy; 2026 Watch Store - G-Shock  Collection</p>
       <p>Đ/c: 26 Trần Phú Móng Cái Quảng Ninh</p>
     </footer>
   </body>
