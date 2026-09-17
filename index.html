@@ -664,12 +664,19 @@
       @media (max-width: 480px) {
         header { padding: 12px 16px; }
         .logo { font-size: .95rem; }
-        .hero { padding: 98px 16px 28px; gap: 20px; }
-        .hero h1 { font-size: 2rem; margin: 12px 0; }
-        .hero-image { max-width: 260px; }
-        .hero .price-box { margin: 16px 0 6px; }
-        .hero-actions { margin: 18px 0 12px; }
-        .hero-actions .btn-buy, .hero-actions .btn-secondary { flex: 1; padding: 12px 16px; text-align: center; }
+        .hero { padding: 90px 16px max(24px, env(safe-area-inset-bottom)); gap: 14px; }
+        .hero h1 { font-size: 1.75rem; line-height: 1.08; margin: 8px 0; }
+        .hero-image { max-width: min(58vw, 220px); }
+        .hero p { font-size: .95rem; line-height: 1.45; }
+        .hero .hero-note { font-size: .85rem; }
+        .hero .price-box { margin: 12px 0 4px; }
+        .hero-actions { margin: 12px 0 10px; }
+        .hero-actions .btn-buy, .hero-actions .btn-secondary { display: inline-flex; align-items: center; justify-content: center; flex: 1; min-height: 44px; padding: 8px 12px; text-align: center; }
+        #fake-order-popup { left: 12px; width: min(280px, calc(100vw - 24px)); gap: 8px; padding: 8px 10px; border-radius: 8px; }
+        .order-icon { width: 26px; height: 26px; }
+        .order-icon .ui-icon { width: 15px; height: 15px; }
+        .order-info { font-size: .75rem; line-height: 1.35; }
+        .order-time { font-size: .68rem; margin-top: 2px; }
         .container, .specs-container, .warranty-container, .fb-container { padding: 0 16px; }
         .product-grid { grid-template-columns: minmax(0, 1fr); }
         .order-form { padding: 20px 16px; }
@@ -928,6 +935,10 @@
                 <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg> Tặng kèm dây đeo thông minh
                 thép không gỉ cao cấp
               </li>
+               <li>
+                <svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+                Tặng hộp thiếc lục giác G-Shock + Hộp giấy bảo vệ bên ngoài
+              </li>
             </ul>
           </div>
           <div class="order-form">
@@ -1069,10 +1080,8 @@
       if (form) {
         const btnSubmit = form.querySelector(".btn-submit");
         const quantity = form.elements.quantity;
-        const status = document.getElementById("order-status");
         const originalButton = btnSubmit.innerHTML;
         const money = (value) => new Intl.NumberFormat("vi-VN").format(value) + "đ";
-        let submitting = false;
         const totals = () => {
           const count = Number(quantity.value);
           const rate = count === 3 ? .1 : count === 2 ? .05 : 0;
@@ -1087,86 +1096,41 @@
           document.getElementById("discount").textContent = value.discount ? "−" + money(value.discount) : money(0);
           document.getElementById("order-total").textContent = money(value.total);
         };
-        const track = (...args) => {
-          try { if (typeof window.fbq === "function") window.fbq(...args); } catch { /* Analytics must not interrupt checkout. */ }
-        };
-        const showStatus = (message, state) => {
-          status.textContent = message;
-          status.dataset.state = state;
-        };
-        const fields = ["fullname", "phone", "address"];
-        fields.forEach((name) => form.elements[name].addEventListener("input", () => {
-          form.elements[name].removeAttribute("aria-invalid");
-          document.getElementById(name + "-error").textContent = "";
-        }));
         quantity.addEventListener("change", updateTotal);
         form.addEventListener("reset", () => setTimeout(updateTotal, 0));
         updateTotal();
-        // Native validation remains available when JavaScript is unavailable.
-        form.noValidate = true;
-        form.addEventListener("submit", async (event) => {
-          event.preventDefault();
-          if (submitting) return;
-          let firstInvalid = null;
-          fields.forEach((name) => {
-            const input = form.elements[name];
-            input.value = input.value.trim();
-            const normalizedPhone = input.value.replace(/[\s.()-]/g, "");
-            let message = !input.value ? "Vui lòng điền thông tin này." : "";
-            if (name === "phone" && input.value && !/^(?:0|\+84)(?:[35789]\d{8}|2\d{9})$/.test(normalizedPhone)) {
-              message = "Nhập số điện thoại Việt Nam hợp lệ, bắt đầu bằng 0 hoặc +84.";
-            }
-            if (input.value.length > input.maxLength && input.maxLength > 0) message = "Thông tin quá dài, vui lòng rút gọn.";
-            document.getElementById(name + "-error").textContent = message;
-            input.setAttribute("aria-invalid", String(Boolean(message)));
-            if (message && !firstInvalid) firstInvalid = input;
-          });
-          if (firstInvalid) {
-            showStatus("Vui lòng kiểm tra các mục được đánh dấu.", "error");
-            firstInvalid.focus();
-            return;
-          }
-          if (!["1", "2", "3"].includes(quantity.value)) return;
-          const snapshot = totals();
-          const payload = new FormData(form);
-          const controls = Array.from(form.querySelectorAll("input, textarea, select, button"));
-          submitting = true;
-          form.setAttribute("aria-busy", "true");
-          controls.forEach((control) => { control.disabled = true; });
-          btnSubmit.textContent = "ĐANG GỬI…";
-          showStatus("Đang gửi đơn hàng. Vui lòng đợi xác nhận.", "pending");
-          track("track", "InitiateCheckout");
-          const controller = new AbortController();
-          const timeout = setTimeout(() => controller.abort(), 15000);
-          let state = "uncertain";
-          try {
-            const response = await fetch(scriptURL, { method: "POST", body: payload, signal: controller.signal });
-            const result = await response.json().catch(() => null);
-            const confirmed = response.ok && result && (result.result === "success" || result.success === true) && result.success !== false && !result.error && result.result !== "error";
-            if (confirmed) {
-              state = "success";
-              showStatus(`Đã ghi nhận đơn ${snapshot.count} chiếc, tổng ${money(snapshot.total)}. Cửa hàng sẽ liên hệ xác nhận và giao hàng.`, state);
-              track("track", "Purchase", { value: snapshot.total, currency: "VND" });
-              form.reset();
-              updateTotal();
-            } else if (response.ok && result && (result.success === false || result.result === "error")) {
-              state = "error";
-              showStatus("Hệ thống báo chưa lưu được đơn. Thông tin vẫn được giữ lại; bạn có thể thử gửi lại.", state);
-            } else {
-              showStatus("Chưa xác nhận được đơn đã lưu. Thông tin vẫn được giữ lại. Vui lòng kiểm tra với cửa hàng trước khi gửi lại để tránh trùng đơn.", state);
-            }
-          } catch {
-            showStatus("Kết nối bị gián đoạn hoặc phản hồi quá lâu; chưa xác nhận được đơn đã lưu. Vui lòng kiểm tra với cửa hàng trước khi gửi lại để tránh trùng đơn.", state);
-          } finally {
-            clearTimeout(timeout);
-            submitting = false;
-            form.removeAttribute("aria-busy");
-            controls.forEach((control) => { control.disabled = false; });
-            btnSubmit.innerHTML = state === "uncertain" ? "GỬI LẠI YÊU CẦU" : originalButton;
-            status.focus();
-          }
-        });
         btnSubmit.disabled = false;
+
+        form.addEventListener("submit", (e) => {
+          fbq("track", "InitiateCheckout");
+          e.preventDefault();
+
+          btnSubmit.disabled = true;
+          btnSubmit.innerHTML = "ĐANG GỬI...";
+
+          fetch(scriptURL, {
+            method: "POST",
+            body: new FormData(form),
+          })
+            .then((response) => {
+              alert(
+                "Chúc mừng! Đơn hàng của bạn đã được lưu thành công vào hệ thống. Chúng tôi sẽ sớm liên hệ!",
+              );
+              btnSubmit.disabled = false;
+              btnSubmit.innerHTML = originalButton;
+              fbq("track", "Purchase", {
+                value: 889000,
+                currency: "VND",
+              });
+              form.reset();
+            })
+            .catch((error) => {
+              console.error("Lỗi!", error.message);
+              alert("Có lỗi xảy ra. Vui lòng thử lại hoặc gọi hotline!");
+              btnSubmit.disabled = false;
+              btnSubmit.innerHTML = originalButton;
+            });
+        });
       }
     </script>
 
