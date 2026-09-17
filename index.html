@@ -1286,188 +1286,20 @@
       color: #1877f2;
     }
 
-    /* ================= 8. SECTION ĐẶT HÀNG & TÓM TẮT ĐƠN HÀNG (LÀM RÕ BƯỚC ĐẶT HÀNG) ================= */
+    /* ================= 8. SECTION ĐẶT HÀNG ================= */
     #order-section {
       padding: 70px 0;
       background: linear-gradient(180deg, #111111 0%, #1e1e1e 100%);
     }
 
     .order-layout {
-      display: flex;
-      gap: 30px;
-      align-items: flex-start;
-    }
-
-    /* Cột trái: Tóm tắt đơn hàng & Quy trình */
-    .order-summary-col {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .order-summary-card {
-      background: #1a1a1a;
-      border: 1.5px solid #333;
-      border-radius: 14px;
-      padding: 24px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    }
-
-    .order-summary-header {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #2e2e2e;
-    }
-
-    .summary-product-item {
-      display: flex;
-      gap: 14px;
-      margin-bottom: 16px;
-    }
-
-    .summary-thumb {
-      width: 75px;
-      height: 75px;
-      border-radius: 8px;
-      object-fit: cover;
-      border: 1px solid #444;
-      flex-shrink: 0;
-    }
-
-    .summary-prod-details h4 {
-      font-size: 0.95rem;
-      color: #fff;
-      margin-bottom: 4px;
-    }
-
-    .summary-prod-details p {
-      font-size: 0.78rem;
-      color: #aaa;
-    }
-
-    .summary-breakdown {
-      background: #141414;
-      border-radius: 8px;
-      padding: 14px;
-      margin-bottom: 16px;
-    }
-
-    .summary-line {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      color: #bbb;
-      margin-bottom: 8px;
-    }
-
-    .summary-line:last-child {
-      margin-bottom: 0;
-    }
-
-    .summary-line.highlight {
-      color: #2ecc71;
-      font-weight: 600;
-    }
-
-    .summary-total-box {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding-top: 12px;
-      border-top: 1.5px dashed #3a3a3a;
-    }
-
-    .summary-total-box span.lbl {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .summary-total-box span.val {
-      font-size: 1.8rem;
-      font-weight: 900;
-      color: #2ecc71;
-    }
-
-    /* Hộp 3 bước quy trình xử lý */
-    .order-process-card {
-      background: #161616;
-      border: 1px solid #2a2a2a;
-      border-radius: 12px;
-      padding: 20px;
-    }
-
-    .order-process-card h4 {
-      font-size: 0.92rem;
-      color: #ffcc00;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .process-steps {
-      list-style: none;
-      padding: 0;
-    }
-
-    .process-step-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-
-    .process-step-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .process-step-badge {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: rgba(218, 2, 14, 0.2);
-      color: var(--primary-red);
-      border: 1px solid rgba(218, 2, 14, 0.4);
-      font-size: 0.75rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .process-step-text strong {
-      color: #fff;
-      font-size: 0.85rem;
-      display: block;
-    }
-
-    .process-step-text p {
-      font-size: 0.78rem;
-      color: #888;
-      line-height: 1.35;
-      margin-top: 2px;
-    }
-
-    /* Cột phải: Form đặt hàng */
-    .order-form-col {
-      flex: 1.1;
+      max-width: 580px;
+      margin: 0 auto;
     }
 
     .order-form {
       background: #1b1b1b;
-      padding: 30px;
+      padding: 35px 30px;
       border-radius: 14px;
       border: 1px solid #333;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
@@ -1577,10 +1409,6 @@
 
       .specs-core-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .order-layout {
-        flex-direction: column;
       }
     }
 
@@ -1730,7 +1558,7 @@
           </div>
         </div>
         <div class="trust-card">
-          <div class="trust-icon"><i class="fas fa-shield-halved"></i></div>
+          <div class="trust-icon"><i class="fas fa-calendar-check"></i></div>
           <div class="trust-text">
             <h4>Bảo Hành 5 Năm</h4>
             <p>Bảo hành máy 5 năm, miễn phí thay pin trọn đời</p>
@@ -1820,7 +1648,7 @@
         <div class="qa-card">
           <div class="qa-img-wrapper">
             <span class="qa-tag"><i class="fas fa-hand"></i> Size Mặt & Form Dáng</span>
-            <img src="./mu-1.png" alt="Đồng hồ G-Shock MU dây đỏ đeo trên tay" />
+            <img src="./mudotrentay.jpg" alt="Đồng hồ G-Shock MU dây đỏ đeo trên tay" />
           </div>
           <div class="qa-content">
             <div class="qa-question">
@@ -2041,6 +1869,60 @@
     </div>
   </section>
 
+  <!-- 8. KHU VỰC ĐẶT HÀNG -->
+  <section id="order-section">
+    <div class="section-container">
+      <div class="sec-title-box">
+        <span class="sec-badge"><i class="fas fa-cart-shopping"></i> Ưu Đãi Độc Quyền</span>
+        <h2 class="sec-title">Đặt Hàng <span>Nhận Ưu Đãi Ngay</span></h2>
+        <p class="sec-subtitle">Chỉ áp dụng trong ngày hôm nay - Số lượng có hạn</p>
+      </div>
+
+      <div class="order-layout">
+        <div class="order-form">
+          <h3>Thông Tin Nhận Hàng</h3>
+          <p class="order-form-desc">Vui lòng điền đúng số điện thoại để nhân viên gọi xác nhận đơn</p>
+
+          <form id="purchaseForm">
+            <div class="form-group">
+              <label for="fullname">Họ và tên người nhận *</label>
+              <input type="text" id="fullname" name="fullname" placeholder="Ví dụ: Nguyễn Văn Nam" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Số điện thoại liên hệ *</label>
+              <input type="tel" id="phone" name="phone" placeholder="Ví dụ: 0912345xxx" required />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Địa chỉ giao hàng chi tiết *</label>
+              <textarea id="address" name="address" rows="3"
+                placeholder="Số nhà, tên đường, thôn/xóm, phường/xã, quận/huyện, tỉnh/thành phố" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="quantity">Số lượng đặt mua</label>
+              <select id="quantity" name="quantity">
+                <option value="1">1 chiếc - 889.000đ (Tặng 1 dây thép)</option>
+                <option value="2">2 chiếc - 1.689.000đ (Giảm thêm 5% ~ 89.000đ)</option>
+                <option value="3">3 chiếc - 2.399.000đ (Giảm thêm 10% ~ 268.000đ)</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG NGAY
+            </button>
+          </form>
+
+          <p style="font-size: 0.8rem; color: #888; margin-top: 15px; text-align: center;">
+            <i class="fas fa-lock" style="color: #2ecc71;"></i> Thông tin của bạn được bảo mật tuyệt đối. Kiểm tra
+            hàng trước khi thanh toán.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 7. PHẢN HỒI THẬT CÓ ẢNH TỪ KHÁCH HÀNG (ĐƯA LÊN TRƯỚC FORM ĐẶT HÀNG) -->
   <section class="fb-comments-section" id="reviews">
     <div class="fb-container">
@@ -2150,130 +2032,6 @@
     </div>
   </section>
 
-  <!-- 8. KHU VỰC ĐẶT HÀNG: LÀM RÕ TÓM TẮT ĐƠN HÀNG, TỔNG TIỀN VÀ QUY TRÌNH XỬ LÝ -->
-  <section id="order-section">
-    <div class="section-container">
-      <div class="sec-title-box">
-        <span class="sec-badge"><i class="fas fa-cart-shopping"></i> Ưu Đãi Độc Quyền</span>
-        <h2 class="sec-title">Đặt Hàng <span>Nhận Ưu Đãi Ngay</span></h2>
-        <p class="sec-subtitle">Chỉ áp dụng trong ngày hôm nay - Số lượng có hạn</p>
-      </div>
-
-      <div class="order-layout">
-        <!-- Cột trái: Tóm tắt đơn hàng & Quy trình xử lý của shop -->
-        <div class="order-summary-col">
-          <!-- Bản tóm tắt đầy đủ đơn hàng -->
-          <div class="order-summary-card">
-            <div class="order-summary-header">
-              <i class="fas fa-receipt" style="color: var(--primary-red);"></i>
-              <span>Tóm Tắt Đơn Hàng Của Bạn</span>
-            </div>
-
-            <div class="summary-product-item">
-              <img src="./mu-4.jpg" alt="Đồng hồ G-Shock MU" class="summary-thumb" />
-              <div class="summary-prod-details">
-                <h4>G-Shock GA-2100 Custom Manchester United</h4>
-                <p>Trọn bộ: 01 Đồng hồ + 02 Bộ dây (Dây đỏ & Dây thép) + Dụng cụ thay</p>
-              </div>
-            </div>
-
-            <div class="summary-breakdown">
-              <div class="summary-line">
-                <span>Số lượng:</span>
-                <strong id="summary-quantity-text">1 chiếc</strong>
-              </div>
-              <div class="summary-line highlight">
-                <span>Quà tặng đi kèm:</span>
-                <strong id="summary-discount-text">Tặng kèm 1 dây thép cao cấp</strong>
-              </div>
-              <div class="summary-line">
-                <span>Phí vận chuyển:</span>
-                <strong style="color: #2ecc71;">MIỄN PHÍ (0đ)</strong>
-              </div>
-              <div class="summary-line">
-                <span>Đồng kiểm khi nhận:</span>
-                <strong style="color: #2ecc71;">Được mở hộp kiểm tra</strong>
-              </div>
-            </div>
-
-            <div class="summary-total-box">
-              <span class="lbl">TỔNG THANH TOÁN:</span>
-              <span class="val" id="summary-total-price">889.000đ</span>
-            </div>
-          </div>
-
-          <!-- Quy trình 3 bước xử lý sau khi gửi form -->
-          <div class="order-process-card">
-            <h4><i class="fas fa-clipboard-check"></i> Quy Trình Xử Lý Sau Khi Gửi Đơn</h4>
-            <ul class="process-steps">
-              <li class="process-step-item">
-                <div class="process-step-badge">1</div>
-                <div class="process-step-text">
-                  <strong>Gọi xác nhận đơn hàng</strong>
-                </div>
-              </li>
-              <li class="process-step-item">
-                <div class="process-step-badge">2</div>
-                <div class="process-step-text">
-                  <strong>Đóng gói cẩn thận</strong>
-                </div>
-              </li>
-              <li class="process-step-item">
-                <div class="process-step-badge">3</div>
-                <div class="process-step-text">
-                  <strong>Giao hàng & Kiểm tra hàng trước khi thanh toán</strong>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Cột phải: Form đặt hàng (Logic giữ nguyên 100%) -->
-        <div class="order-form-col">
-          <div class="order-form">
-            <h3>Thông Tin Nhận Hàng</h3>
-            <p class="order-form-desc">Vui lòng điền đúng số điện thoại để nhân viên gọi xác nhận đơn</p>
-
-            <form id="purchaseForm">
-              <div class="form-group">
-                <label for="fullname">Họ và tên người nhận *</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Ví dụ: Nguyễn Văn Nam" required />
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Số điện thoại liên hệ *</label>
-                <input type="tel" id="phone" name="phone" placeholder="Ví dụ: 0912345xxx" required />
-              </div>
-
-              <div class="form-group">
-                <label for="address">Địa chỉ giao hàng chi tiết *</label>
-                <textarea id="address" name="address" rows="3"
-                  placeholder="Số nhà, tên đường, thôn/xóm, phường/xã, quận/huyện, tỉnh/thành phố" required></textarea>
-              </div>
-
-              <div class="form-group">
-                <label for="quantity">Số lượng đặt mua</label>
-                <select id="quantity" name="quantity">
-                  <option value="1">1 chiếc - 889.000đ (Tặng 1 dây thép)</option>
-                  <option value="2">2 chiếc - 1.689.000đ (Giảm thêm 5% ~ 89.000đ)</option>
-                  <option value="3">3 chiếc - 2.399.000đ (Giảm thêm 10% ~ 268.000đ)</option>
-                </select>
-              </div>
-
-              <button type="submit" class="btn-submit">
-                <i class="fas fa-shopping-cart"></i> XÁC NHẬN ĐẶT HÀNG NGAY
-              </button>
-            </form>
-
-            <p style="font-size: 0.8rem; color: #888; margin-top: 15px; text-align: center;">
-              <i class="fas fa-lock" style="color: #2ecc71;"></i> Thông tin của bạn được bảo mật tuyệt đối. Kiểm tra
-              hàng trước khi thanh toán.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <script>
     const scriptURL =
@@ -2281,27 +2039,13 @@
     const form = document.getElementById("purchaseForm");
     const btnSubmit = form.querySelector(".btn-submit");
 
-    // Cập nhật tóm tắt đơn hàng khi đổi số lượng
     const qtySelect = document.getElementById("quantity");
-    const summaryQuantityText = document.getElementById("summary-quantity-text");
-    const summaryTotalPrice = document.getElementById("summary-total-price");
-    const summaryDiscountText = document.getElementById("summary-discount-text");
 
     const priceMap = {
-      "1": { text: "1 chiếc", price: "889.000đ", discount: "Tặng kèm 1 dây thép cao cấp", value: 889000 },
-      "2": { text: "2 chiếc (Giảm thêm 5%)", price: "1.689.000đ", discount: "Đã giảm thêm 5% (~89.000đ) + Tặng 2 dây thép", value: 1689000 },
-      "3": { text: "3 chiếc (Giảm thêm 10%)", price: "2.399.000đ", discount: "Đã giảm thêm 10% (~268.000đ) + Tặng 3 dây thép", value: 2399000 }
+      "1": { value: 889000 },
+      "2": { value: 1689000 },
+      "3": { value: 2399000 }
     };
-
-    if (qtySelect) {
-      qtySelect.addEventListener("change", (e) => {
-        const val = e.target.value;
-        const info = priceMap[val] || priceMap["1"];
-        if (summaryQuantityText) summaryQuantityText.textContent = info.text;
-        if (summaryTotalPrice) summaryTotalPrice.textContent = info.price;
-        if (summaryDiscountText) summaryDiscountText.textContent = info.discount;
-      });
-    }
 
     form.addEventListener("submit", (e) => {
       fbq("track", "InitiateCheckout");
@@ -2331,9 +2075,6 @@
             currency: "VND",
           });
           form.reset();
-          if (summaryQuantityText) summaryQuantityText.textContent = "1 chiếc";
-          if (summaryTotalPrice) summaryTotalPrice.textContent = "889.000đ";
-          if (summaryDiscountText) summaryDiscountText.textContent = "Tặng kèm 1 dây thép cao cấp";
         })
         .catch((error) => {
           console.error("Lỗi!", error.message);
