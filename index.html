@@ -1074,7 +1074,7 @@
     </main>
     <script>
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwMLWd6Lu-OfkIaFfeKfgP9FL182XOCDam2B5h4dF0Yp4ecUWcJm_af_a_d5wGcLMRuYg/exec";
+        "https://script.google.com/macros/s/AKfycbyQYuw2C6P1wQUs-O3caeYru8AlOBhUeeXOw_KcS2Jn3ui-Hf1X5Fa-Dx4rxrSuMmJpFA/exec";
       const form = document.getElementById("purchaseForm");
       if (form) {
         const btnSubmit = form.querySelector(".btn-submit");
@@ -1110,6 +1110,7 @@
           fetch(scriptURL, {
             method: "POST",
             body: new FormData(form),
+            mode: 'no-cors'
           })
             .then((response) => {
               alert(
