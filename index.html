@@ -694,7 +694,7 @@
     <header>
       <div class="logo">G-SHOCK <span>MAN UTD</span></div>
       <nav aria-label="Đặt hàng">
-        <a href="#order-heading" class="btn-buy" style="padding: 0.5rem 1rem"
+        <a href="#order-heading" id="order-heading" class="btn-buy" style="padding: 0.5rem 1rem"
           >Mua Ngay</a
         >
       </nav>
@@ -714,7 +714,7 @@
         <div class="price-box" style="text-align: center;"> <del>2.456.000</del> <span class="new-price" style="font-size: 18px; ">989.000đ</span><span class="price-unit">/ chiếc</span></div>
         <p style="font-size: 20px; text-align: center; font-weight: 600; color: #fff;">Tặng thêm dây kim loại <br /> Miễn phí vận chuyển</p>
         <div class="hero-actions">
-          <a href="#order-heading" class="btn-buy">Đặt hàng</a>
+          <a href="#order-heading" id="order-heading" class="btn-buy">Đặt hàng</a>
           <a href="#gallery" class="btn-secondary">Xem ảnh</a>
         </div>
         <p class="hero-note" style="font-size: 16px; font-weight: 600;">Xem hàng trước, trả tiền sau · Bảo hành 5 năm</p>
@@ -914,7 +914,7 @@
 
     <section id="order-section">
       <div class="container">
-        <h2 class="section-title" id="order-heading">Đặt Hàng <span>Ngay</span></h2>
+        <h2 class="section-title">Đặt Hàng <span>Ngay</span></h2>
 
         <div class="order-wrapper">
           <div class="product-summary">
@@ -1133,6 +1133,11 @@
         });
       }
     </script>
+    <script>
+      document.getElementById("order-heading").addEventListener("click", () => {
+        fbq("track", "Lead");
+      })
+    </script>
 
     <script>
       (() => {
@@ -1214,10 +1219,10 @@
 
       setTimeout(function () {
         trackTimeOnPage(30);
-        fbq("track", "Lead");
       }, 30000);
 
       setTimeout(function () {
+        fbq("track", "Lead");
         trackTimeOnPage(60);
       }, 60000);
 
