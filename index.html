@@ -1133,13 +1133,6 @@
         });
       }
     </script>
-    <script>
-      document.querySelectorAll('a[href="#order-heading"]').forEach((link) => {
-        link.addEventListener("click", () => {
-          fbq("track", "Lead");
-        });
-      });
-    </script>
 
     <script>
       (() => {
@@ -1224,7 +1217,6 @@
       }, 30000);
 
       setTimeout(function () {
-        fbq("track", "Lead");
         trackTimeOnPage(60);
       }, 60000);
 
@@ -1264,7 +1256,6 @@
         // Bắn sự kiện khi cuộn đạt 80%
         if (pctScrolled >= 80 && !scrollTracked[80]) {
           fbq("trackCustom", "Scroll_80_Percent");
-          fbq("track", "Lead");
           scrollTracked[80] = true;
         }
       });
